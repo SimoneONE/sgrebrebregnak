@@ -47,6 +47,8 @@ grestore
 %
 \usepackage{graphicx}
 %
+\usepackage{hyperref}
+%
 \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
 % insert here the call for the packages your document requires
@@ -57,8 +59,14 @@ grestore
 \newcommand{\hospital}{`\textit{San Carlo di Nancy}' hospital }
 %
 % Insert the name of "your journal" with
-% \journalname{myjournal}
+\journalname{BISE}
 %
+\makeatletter
+\newcommand{\setword}[2]{%
+  \phantomsection
+  #1\def\@currentlabel{\unexpanded{#1}}\label{#2}%
+}
+\makeatother
 \begin{document}
 
 \title{Applying process mining techniques in a real healthcare case study%\thanks{Grants or other notes
@@ -124,20 +132,45 @@ Nowdays, the hospitals try to streamline their processes in order to deliver hig
 \end{itemize}
 These three datasets contain raw data about patients treated in both year 2016 and May 2017 for which all the treatment activities have been recorded. We did not use any a-priori knowledge about the careflows of the patients of \hospital and did not have any process model at hand. The data analyzed are the standard ones of the National Health Service (Servizio Sanitario Nazionale) that the hospitals interchanged with the Regional Authorities (Enti Regione). Therefore the presented analysis can be replicated nationwide.%This paper is structured as follows: Section provides a detailed explanation of the tools used within ProM in order to derive process models, social networks and transition systems from relevant event logs. In Section we will emphasize the results obtained by applying process mining techniques. Section concludes the case study.
 \newpage
-\label{adtool}
-Your text comes here. Separate text sections with
-\section{Section title}
-\label{sec:1}
-Text with citations \cite{RefB} and \cite{RefJ}.
-\subsection{Subsection title}
-\label{sec:2}
-as required. Don't forget to give each section
-and subsection a unique label (see Sect.~\ref{sec:1}).
-\paragraph{Paragraph headings} Use paragraph headings as needed.
-\begin{equation}
-a^2+b^2=c^2
-\end{equation}
 
+%\label{adtool}
+%Your text comes here. Separate text sections with
+%\section{Section title}
+%\label{sec:1}
+%Text with citations \cite{RefB} and \cite{RefJ}.
+%\subsection{Subsection title}
+%\label{sec:2}
+%as required. Don't forget to give each section
+%and subsection a unique label (see Sect.~\ref{sec:1}).
+%\paragraph{Paragraph headings} Use paragraph headings as needed.
+%\begin{equation}
+%a^2+b^2=c^2
+%\end{equation}
+\section{Analysis} \label{analysis}
+In this section, we discuss the results obtained by applying process mining techniques (process discovery, social network analysis and performance analysis) on the datasets of \hospital already `\textit{converted}' to event logs: `\textit{Ambulatori}', `\textit{Pronto soccorso}' and `\textit{Ricoveri}'. The process mining techniques we used for discovering the process model of the totality of patients (blueprint) are: the \textit{Alpha Miner} algorithm, the \textit{Heuristic Miner} algorithm and the \textit{Inductive Miner} algorithm. In order to establish which process model out of three is representing better the behaviour observed in the event log, and therefore which mining algorithm is the best, we computed the four quality metrics replay fitness, precision, generalization and simplicity. ProM 6.7 allows to compute replay fitness, precision and generalization only. Therefore simplicity is calculated on the basis of this metric: \#$activities \;+\;$\#$splits \;+\; $\#$joins$. The grater is the value, the less is the simplicity of the process model. At the end, the best algorithm will be chosen on the basis of the just mentioned quality metrics. Since the inductive visual miner is high parametrisable ( i.e., we can set a-priori the replay fitness we would like to reach in order to obtain a process model in function of this fitness value) therefore it's the algorithm with the best compromise between the just mentioned quality metrics. For this reason, we picked the inductive visual miner as process discovery technique. After discovered the blueprint of all the three datasets, we have performed ad-hoc analysis for these set of clusters:
+\begin{itemize}
+\item foreign patients [\setword{1}{Word:foreign}] vs. italian patients [\setword{2}{Word:italian}]
+\item patients with an age lower or equal than 25 years (resident in Latium)[\setword{3}{Word:young}] vs. patients with an age greater than 25 years (resident in Latium) [\setword{4}{Word:old}]
+\end{itemize}
+Only for `\textit{Ricoveri}' dataset we have performed a further in depth analysis for these specialist branches: \textit{chirurgia generale}, \textit{medicina generale} and \textit{ortopedia and traumatologia} looking at both pre-operative hospitalization time (the time a patient is waiting for the surgical intervention) and post-operative hospitalization time (the time a patient is waiting for being discharged). After did this phase of analysis and presented results, we performed a second ad-hoc analysis, with the goal of refining the overall procedure, on the following set of clusters:
+\begin{itemize}
+\item patients with an age lower or equal than 40 years (resident in Latium)[\setword{5}{Word:young2}] vs. patients with an age greater than 40 years (resident in Latium) [\setword{6}{Word:old2}]
+\item patients performing health services in \textit{laboratorio analisi}, with medical prescription compiled by doctors of other hospitals, belonging to any specialist branches [\setword{7}{Word:lab00}]
+\item patients coming from emergency room with hospitalization outcome [\setword{8}{Word:fromps}] vs. patients hospitalized not coming from emergency room [\setword{9}{Word:notfromps}], partitioned in specialist branches
+\item patients hospitalized with reservation [\setword{10}{Word:reserv}], partitioned in different priority classes
+\item patients hospitalized in \textit{chirurgia endocrina} with main diagnosis 24200/2410/2411 /2419/193 and surgical intervention 064/062 [\setword{11}{Word:endocrina}].
+\end{itemize}
+The third and last ad-hoc analysis involved the following set of clusters:
+\begin{itemize}
+\item patients performing health services in \textit{laboratorio radiologia}, with medical prescription compiled by doctors of other hospitals, belonging to any specialist branches [\setword{11}{Word:lab69}]
+\item Integration of economic values regarding both the patients hospitalized coming from emergency room [\setword{12}{Word:fromps2}] and patients hospitalized not coming from emergency room [\setword{13}{Word:notfromps2}].
+\item patients hospitalized resident in Latium [\setword{14}{Word:lazio}] vs. patients hospitalized resident in a region different from Latium  [\setword{15}{Word:NotLazio}]
+\end{itemize}
+In the last analysis phase we have also removed the duplicate data from both the `\textit{Pronto soccorso}' and `\textit{Ricoveri}' datasets. 
+\newpage
+\subsection{Ambulatori dataset} \label{analysis:1}
+We first showed the blueprint of `\textit{Ambulatori}' in terms of process model, social network and transition system. In this way, we were able to see how patients within the dataset behave, the resources involved in the healthcare flow and the most time consuming activities. Then, we performed the ad-hoc analysis for the clusters already defined in the previous page.
+\section{Conclusions} \label{conclusions}
 % For one-column wide figures use
 \begin{figure}
 % Use the relevant command to insert your figure file.

@@ -54,7 +54,7 @@ grestore
 % etc.
 %
 % please place your own definitions here and don't use \def but
-% \newcommand{}{}
+\newcommand{\hospital}{`\textit{San Carlo di Nancy}' hospital }
 %
 % Insert the name of "your journal" with
 % \journalname{myjournal}
@@ -71,19 +71,33 @@ grestore
 
 \author{M. Mecella \and
 		F. Covino \and 
-		A. Marrella\and 
+		A. Marrella\and \\
 		S. Agostinelli}
 
 %\authorrunning{Short form of author list} % if too long for running head
 
-\institute{S. Agostinelli \and M. Mecella \and A.Marrella \at
-              Sapienza University of Rome, Piazzale Aldo Moro 5, Rome, 00185 \\
-              %Tel.: +39 3351478559\\
-             %\email{simone.agostinelli.sa@gmail.com}           %  \\
+\institute{M. Mecella \at
+			  Professor in Engineering in Computer Science at Sapienza University of Rome\\
+              %Tel: +39 0677274028 \\
+			  %Fax: +39 0677274002 \\
+              \email{mecella@dis.uniroma1.it}           %  \\
+%             \emph{Present address:} of F. Author  %  if needed
+           \and
+           A. Marrella \at
+              Postdoctoral research fellow in Computer Science and Engineering at Sapienza University of Rome\\
+              %Tel: +39-06-77274012 \\
+			  %Tel: +39-06-77274013 \\
+			  %Fax: +39-06-77274002 \\
+              \email{a.marrella@gmail.com}           %  \\
 %             \emph{Present address:} of F. Author  %  if needed
            \and
            F. Covino \at
-              Technosky an ENAV Company
+           CMMI Business Analyst at ENAV\\
+           \email{federico.covino@gmail.com}
+           \and
+           S. Agostinelli \at
+           Graduated in Computer Engineering at Sapienza University of Rome\\
+           \email{simone.agostinelli.sa@gmail.com}
 }
 
 \date{Received: date / Accepted: date}
@@ -93,15 +107,24 @@ grestore
 \maketitle
 
 \begin{abstract}
-Insert your abstract here. Include keywords, PACS and mathematical
-subject classification numbers as needed.
-\keywords{First keyword \and Second keyword \and More}
+%Insert your abstract here. Include keywords, PACS and mathematical
+%subject classification numbers as needed.
+The healthcare organizations are under increasing pressure to improve productivity, gain competitive advantage and reduce costs. For this reason, healthcare organizations, such as hospitals try to streamline their processes. In this paper we demonstrate the applicability of process mining in the healthcare domain, using a real case study of \hospital in Rome (GVM Group). We apply process mining techniques to obtain meaningful knowledge about the patient careflows from so-called event logs, obtained from raw data of hospital information systems. We analyzed these logs using the ProM framework from three different perspectives: the control flow perspective, the organizational perspective and the timing perspective. The results show that process mining can be used to provide new insights that facilitate the improvement of existing careflows.
+\keywords{Process mining \and Healthcare \and ProM}
 % \PACS{PACS code1 \and PACS code2 \and more}
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
-
+\clearpage
 \section{Introduction}
-\label{intro}
+Nowdays, the hospitals try to streamline their processes in order to deliver high quality care while at the same time improving revenues and reducing costs. More and more pressure is put on hospitals to work in the most efficient way as possible, whereas in the future, an increase in the demand for care is expected. A complicating factor is that healthcare is characterized by highly complex and extremely flexible patient care processes, also referred to as `\textit{careflows}'. In healthcare organisations, a wide range of processes with different characteristics and requirements are daily managed and executed. The delivery of complex care may involve several departments and organisations, and requires an active collaboration between different professionals and practitioners having heterogeneus skills. Healthcare is thus widely recognised as one of the most promising, yet challenging, domains for the adoption of process-oriented solutions. We demonstrates the applicability of process mining in the healthcare domain, using a real case study of \hospital in Rome (GVM Group). We apply process mining techniques to obtain meaningful knowledge about the patient careflows from so-called `\textit{event logs}' obtained from raw data of hospital information systems. Process mining aims at extracting process knowledge from that logs in order to discover, for example, both typical paths followed by particular groups of patients and strong collaboration between different hospitalization wards. We analyzed the different careflows both under the control flow perspective (emphasizing the differences between the process models obtained from different cluster of patients), the organizational perspective (looking at the social networks we were able to discover the relationship between the resources of the patient careflow) and the performance perspective (looking at the timing perspective of different activities performed by the patients we were able to discover bottlenecks in the patient careflow). In order to do so, we extracted the event logs from the raw datasets of \hospital and we analyzed them using \textit{ProM}: the process mining framework. The datasets in question are the following:
+\begin{itemize}
+\item \textit{Ambulatori} (outpatient clinic): each row stores the information about a single healthcare service.
+\item \textit{Pronto soccorso} (emergency room): each row represents a single emergency room activity.
+\item \textit{Ricoveri} (hospitalizations): each row represents a single hospitalization taken by a patient.
+\end{itemize}
+These three datasets contain raw data about patients treated in both year 2016 and May 2017 for which all the treatment activities have been recorded. We did not use any a-priori knowledge about the careflows of the patients of \hospital and did not have any process model at hand. The data analyzed are the standard ones of the National Health Service (Servizio Sanitario Nazionale) that the hospitals interchanged with the Regional Authorities (Enti Regione). Therefore the presented analysis can be replicated nationwide.%This paper is structured as follows: Section provides a detailed explanation of the tools used within ProM in order to derive process models, social networks and transition systems from relevant event logs. In Section we will emphasize the results obtained by applying process mining techniques. Section concludes the case study.
+\newpage
+\label{adtool}
 Your text comes here. Separate text sections with
 \section{Section title}
 \label{sec:1}

@@ -51,6 +51,7 @@ grestore
 %
 \usepackage{mathptmx}      % use Times fonts if available on your TeX system
 %
+\usepackage{comment}
 % insert here the call for the packages your document requires
 \usepackage{latexsym}
 % etc.
@@ -59,7 +60,7 @@ grestore
 \newcommand{\hospital}{`\textit{San Carlo di Nancy}' hospital }
 %
 % Insert the name of "your journal" with
-\journalname{BISE}
+%\journalname{BISE}
 %
 \makeatletter
 \newcommand{\setword}[2]{%
@@ -131,7 +132,7 @@ Nowdays, the hospitals try to streamline their processes in order to deliver hig
 \item \textit{Ricoveri} (hospitalizations): each row represents a single hospitalization taken by a patient.
 \end{itemize}
 These three datasets contain raw data about patients treated in both year 2016 and May 2017 for which all the treatment activities have been recorded. We did not use any a-priori knowledge about the careflows of the patients of \hospital and did not have any process model at hand. The data analyzed are the standard ones of the National Health Service (Servizio Sanitario Nazionale) that the hospitals interchanged with the Regional Authorities (Enti Regione). Therefore the presented analysis can be replicated nationwide.%This paper is structured as follows: Section provides a detailed explanation of the tools used within ProM in order to derive process models, social networks and transition systems from relevant event logs. In Section we will emphasize the results obtained by applying process mining techniques. Section concludes the case study.
-\newpage
+\clearpage
 
 %\label{adtool}
 %Your text comes here. Separate text sections with
@@ -152,25 +153,369 @@ In this section, we discuss the results obtained by applying process mining tech
 \item foreign patients [\setword{1}{Word:foreign}] vs. italian patients [\setword{2}{Word:italian}]
 \item patients with an age lower or equal than 25 years (resident in Latium)[\setword{3}{Word:young}] vs. patients with an age greater than 25 years (resident in Latium) [\setword{4}{Word:old}]
 \end{itemize}
-Only for `\textit{Ricoveri}' dataset we have performed a further in depth analysis for these specialist branches: \textit{chirurgia generale}, \textit{medicina generale} and \textit{ortopedia and traumatologia} looking at both pre-operative hospitalization time (the time a patient is waiting for the surgical intervention) and post-operative hospitalization time (the time a patient is waiting for being discharged). After did this phase of analysis and presented results, we performed a second ad-hoc analysis, with the goal of refining the overall procedure, on the following set of clusters:
-\begin{itemize}
-\item patients with an age lower or equal than 40 years (resident in Latium)[\setword{5}{Word:young2}] vs. patients with an age greater than 40 years (resident in Latium) [\setword{6}{Word:old2}]
-\item patients performing health services in \textit{laboratorio analisi}, with medical prescription compiled by doctors of other hospitals, belonging to any specialist branches [\setword{7}{Word:lab00}]
-\item patients coming from emergency room with hospitalization outcome [\setword{8}{Word:fromps}] vs. patients hospitalized not coming from emergency room [\setword{9}{Word:notfromps}], partitioned in specialist branches
-\item patients hospitalized with reservation [\setword{10}{Word:reserv}], partitioned in different priority classes
-\item patients hospitalized in \textit{chirurgia endocrina} with main diagnosis 24200/2410/2411 /2419/193 and surgical intervention 064/062 [\setword{11}{Word:endocrina}].
-\end{itemize}
-The third and last ad-hoc analysis involved the following set of clusters:
-\begin{itemize}
-\item patients performing health services in \textit{laboratorio radiologia}, with medical prescription compiled by doctors of other hospitals, belonging to any specialist branches [\setword{11}{Word:lab69}]
-\item Integration of economic values regarding both the patients hospitalized coming from emergency room [\setword{12}{Word:fromps2}] and patients hospitalized not coming from emergency room [\setword{13}{Word:notfromps2}].
-\item patients hospitalized resident in Latium [\setword{14}{Word:lazio}] vs. patients hospitalized resident in a region different from Latium  [\setword{15}{Word:NotLazio}]
-\end{itemize}
-In the last analysis phase we have also removed the duplicate data from both the `\textit{Pronto soccorso}' and `\textit{Ricoveri}' datasets. 
-\newpage
+Only for `\textit{Ricoveri}' dataset we have performed a further in depth analysis for these specialist branches: \textit{chirurgia generale}, \textit{medicina generale} and \textit{ortopedia and traumatologia} looking at both pre-operative hospitalization time (the time a patient is waiting for the surgical intervention) and post-operative hospitalization time (the time a patient is waiting for being discharged).
+\clearpage
 \subsection{Ambulatori dataset} \label{analysis:1}
-We first showed the blueprint of `\textit{Ambulatori}' in terms of process model, social network and transition system. In this way, we were able to see how patients within the dataset behave, the resources involved in the healthcare flow and the most time consuming activities. Then, we performed the ad-hoc analysis for the clusters already defined in the previous page.
+The \setword{blueprint}{Word:bpprocmod} in terms of process model is the following:
+\begin{figure*}[htbp]
+\includegraphics[width=\textwidth, keepaspectratio]{AmbulatoriInductiveVisualMiner}
+\caption{Clinical path (Totality of patients)}
+\end{figure*}\\
+Looking at the figure, we can see that the most of the patients takes the medical prescription and asks for a reservation before the healthcare provision. From the organizational point of view, the \setword{social network}{Word:ambsocnet} derived is as follow:
+\begin{figure*}[htbp]
+\includegraphics[width=0.75\textwidth, keepaspectratio]{AmbulatoriSocialNetwork}
+\caption{Social network (Totality of patients)}
+\end{figure*}\\
+From the picture points out that the types of prescriptive subjects involved in prescriptions are both `\textit{1}' (medico di medicina generale) and `\textit{2}' (medico specialista dipendente da struttura pubblica). They are connected with the specialist branches accredited for the healthcare provision, since the prescriptive subject chooses the specialist branch when he compiles the medical prescription. Notice that the outpatient clinic `\textit{5701}' (Fisiopatologia della riproduzione umana) is not involved in any social relation, because all the patients go in that outpatient clinic without prescription. Indeed the process model followed by these patients is composed by only one activity, the `\textit{healthcare provision}' activity:
+\begin{figure*} [htbp]
+\includegraphics[width = 0.5\textwidth, keepaspectratio]{AmbulatoriInductiveVisualMiner5701}
+\caption{Fisiopatologia della riproduzione umana}
+\end{figure*}\\
+On the other hand, regarding the performance perspective we have obtained:
+\begin{figure*} [htbp]
+\includegraphics[width=0.3\textwidth, keepaspectratio]{AmbulatoriTransitionSystemSojourn}
+\caption{Transition System (Totality of patients)}
+\end{figure*}\\
+We can see that the most of time, %(35 days 6 hours in avg)
+from the sojourn time point of view, is spent on the activity `\textit{reservation}' where the patient is waiting for the healthcare provision. The standard deviation is very high, meaning that the patients are spread out over a wider range of time, therefore the mean is not significant at all. Then, we have repeated the same analysis for different cluster of patients. We started with both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] obtaining the following process models:
+\begin{figure} [htbp]
+\centering
+\includegraphics[width=\textwidth , keepaspectratio]{AmbulatoriInductiveVisualMinerForeigns}
+\caption{Clinical path (Foreign patients)}
+\end{figure}\\
+\begin{figure*} [htbp]
+\centering
+\includegraphics[width=\textwidth , keepaspectratio]{AmbulatoriInductiveVisualMinerItalians}
+\caption{Clinical path (Italian patients)}
+\end{figure*}\\
+Both the process models are identical to the \ref{Word:bpprocmod}, the only difference is on the number of process executions (3801 for [\ref{Word:foreign}] and 105654 for [\ref{Word:italian}]). Furthermore, looking at both the figures, we can see that the most of both foreign and italian patients take the medical prescription and ask for a reservation before the healthcare provision. From the organizational point of view, the social networks derived from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are as follow:
+\begin{figure*} [htbp]
+\includegraphics[width=0.75\textwidth, keepaspectratio]{AmbulatoriSocialNetworkForeigns}
+\caption{Social Network (Foreign patients)}
+\end{figure*}
+\clearpage
+\begin{figure*}
+\includegraphics[width=0.75\textwidth, keepaspectratio]{AmbulatoriSocialNetworkItalians}
+\caption{Social Network (Italian patients)}
+\end{figure*}
+\noindent
+Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] involve the same resources as the blueprint \ref{Word:ambsocnet}. The only difference is on the outpatient clinic `\textit{4301}' (Urologia): the foreign patients go in this outpatient clinic without medical prescription instead the italian patients with a medical prescription compiled only from `\textit{1}' (medico di medicina generale) .This means all the foreign patients going in `\textit{4301}' perform only one activity, the `\textit{healthcare provision}'activity:
+\begin{figure*} [htbp]
+\includegraphics[width=0.5\textwidth, keepaspectratio]{AmbulatoriInductiveVisualMinerForeigns4301}
+\end{figure*}
+\clearpage
+\noindent
+Looking at the performance perspective, in particular at the \textit{sojourn time} point of view, we obtained:
+\begin{figure*} [htbp]
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=\textwidth, keepaspectratio]{AmbulatorioSojournForeigns}
+\caption{Foreign patients (sojourn time)}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=\textwidth, keepaspectratio]{AmbulatorioSojournItalians}
+\caption{Italian patients (sojourn time)}
+\end{minipage}
+\end{figure*}\\
+At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:italian}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:foreign}], since the cluster of foreign patients contains a number of
+patient's cases strictly lower than the cluster of italian patients. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}], is spent on the activity `\textit{reservation}' where a patient is waiting for the healthcare provision. %the average sojourn time for this activity is 35 days 23 hours for foreign patients and 35 days 25 hours for italian patients.
+The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint.\\
+Now we can consider another set of clusters: patients belonging both to [\ref{Word:young}] and [\ref{Word:old}]. The derived process models are the following:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{AmbulatoriInductiveVisualMinerYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\end{figure}\\
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{AmbulatoriInductiveVisualMinerOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure}\\
+Both the process models are identical to the \ref{Word:bpprocmod}, but there are an interesting difference regarding the behaviour of the patients belonging to both the clusters [\ref{Word:young}] and [\ref{Word:old}], in particular regarding the most frequent path. The most frequent path taken by the patients with an age lower than 25 years (resident in Lazio) is the one made up by the `\textit{healthcare provision}' activity (they go directly in outpatient clinic), instead, the most frequent path taken by the patients with an age grater or equal than 25 years (resident in Lazio) is made up by the following activities: `\textit{prescription}' $ \rightarrow $ `\textit{reservation}' $ \rightarrow$ `\textit{healthcare provision}' (they take the medical prescription, then they ask for a reservation for perfoming the healthcare provision). Another difference which points out is on the number of process executions (9881 for [\ref{Word:young}] and 96506 for [\ref{Word:old}]).
+\clearpage
+\noindent
+From the organizational point of view, the social networks derived from both the clusters [\ref{Word:young}] and [\ref{Word:old}] are as follow:
+\begin{figure} [htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{AmbulatoriSocialNetworkYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\centering
+\includegraphics[width=0.5\textwidth]{AmbulatoriSocialNetworkOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure} \newline
+Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:young}] and [\ref{Word:old}] involve the same resources as the blueprint \ref{Word:ambsocnet}. The main difference is on the outpatient clinic `\textit{4301}' (Urologia): the patients with an age lower than 25 years (resident in Lazio) go in this outpatient clinic without medical prescription, instead, the patients with an age greater or equal than 25 years (resident in Lazio) go in this outpatient clinic with a medical prescription compiled only by `\textit{1}' (medico di medicina generale). This means all the patients belonging to the cluster [\ref{Word:young}] going in `\textit{4301}' (Urologia) perform only one activity, the `\textit{healthcare provision}'activity:
+\begin{figure} [htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{AmbulatoriInductiveVisualMinerYoungs4301}
+\end{figure}\\
+Moreover, patients belonging from [\ref{Word:young}] go in both outpatient clinics `\textit{5801}' (Gastroenterologia) and `\textit{0901}' (Chirurgia generale) with medical prescriptions compiled only by `\textit{1}' (medico di medicina generale). For patients belonging from [\ref{Word:old}] there are also cases of medical prescriptions compiled by `\textit{2}' (medico specialista dipendente da struttura pubblica).\\
+Looking at the performance perspective, in particular at the \textit{sojourn time} point of view, we obtained:
+\begin{figure} [htbp]
+\centering
+\begin{minipage}[t]{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{AmbulatorioSojournYoungs}
+\caption{<25 years}
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+\centering
+\includegraphics[width=\textwidth]{AmbulatorioSojournOlds}
+\caption{>= 25 years}
+\end{minipage}
+\end{figure}\\
+At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:old}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:young}], since the cluster [\ref{Word:young}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:old}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:young}] and [\ref{Word:old}], is spent on the activity `\textit{reservation}' where a patient is waiting for the healthcare provision. % the average sojourn time for this activity is 31 days 1 hour for patients belonging to [\ref{Word:young}] and 35 days 17 hours for patients belonging to [\ref{Word:old}].
+ The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint.
+\section{dataset Pronto soccorso}\label{analysis:2}
+The \setword{blueprint}{Word:prontosoccorsoblueprint} in terms of process model is the following:
+\begin{figure*} [htbp]
+\includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMiner}
+\caption{Clinical path (Totality of patients)}
+\end{figure*}\\
+Looking at the figure, we can see that a patient arrives in emergency room, then performs the problem diagnosis. From here, the patient can have several outcomes. It figures out that the majority of patients are sent home after the illness analysis. From the organizational point of view, the \setword{social network}{Word:prontosoccorsosocialnetwork} derived is as follow:
+\begin{figure*} [htbp]
+\includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoSocialNetwork}
+\caption{Social network (Totality of patients)}
+\end{figure*}\\
+From the social network points out a patient go in emergency room, that is, the one coded with `\textit{12007300}' (San Carlo Nancy emergency room); then he is assigned to emergency room specialty `\textit{99}' and from here he can be either transferred to another Institute or to another hospitalization ward. On the other hand, the transition system, under the \textit{sojourn time} point of view is the following:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoTransitionSystemSojourn}
+\caption{Transition System (Totality of patients)}
+\end{figure}\\
+We can see that the most of time is spent on the activity `\textit{hospitalization}'. Since, the standard deviation diverges from the different average times, meaning that the patients are spread out over a wider range of time,then the mean is not significant at all. For this reason, we have repeated the same analysis for different cluster of patients. We started with both the clusters of foreign [\ref{Word:foreign}] and the italian [\ref{Word:italian}] patients, obtaining the following process models:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoInductiveVisualMinerForeigns}
+\caption{Foreign patients}
+\end{figure}
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoInductiveVisualMinerItalians}
+\caption{Italian patients}
+\end{figure}\\
+Both the process models are identical to the \ref{Word:prontosoccorsoblueprint}, the only difference is on the number of process executions (2958 for [\ref{Word:foreign}] and 19095 for [\ref{Word:italian}]). Furthermore, looking at both the figures, we can see that the most of both foreign and italian patients after performed the illness analysis are sent home. From the organizational point of view, the social networks derived from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are as follow:
+\begin{figure} [htbp]
+\includegraphics[width=0.83\textwidth , keepaspectratio]{ProntoSoccorsoHoWForeigns}
+\caption{Foreign patients}
+\end{figure}
+\clearpage
+\noindent
+\begin{figure}
+\includegraphics[width=0.75\textwidth , keepaspectratio]{ProntoSoccorsoHoWItalians}
+\caption{Italian patients}
+\end{figure}
+Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are quite different. The main difference, which it’s pretty obvious, is that the number of resources involved in the cluster of the italian patients is more grater than the number of resources involved in the cluster of the foreign patients. In particular, italian patients are transferred in a greater number of Institutes. Moreover, there is the hospitalization ward `\textit{3403}' (oculistica) belonging only to the cluster of italian patients. The transition systems, on the \textit{sojourn time} point of view, are:
+\begin{figure} [h]
+\includegraphics[width=0.8\textwidth]{ProntoSoccorsoSojournForeigns}
+\caption{foreign patients}
+\includegraphics[width=0.8\textwidth]{ProntoSoccorsoSojournItalians}
+\caption{italian patients}
+\end{figure} \newline
+At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:italian}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:foreign}], since the cluster [\ref{Word:foreign}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:italian}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis. The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint. Then, we have considered both the clusters of patients with an age lower than 25 years (resident in Lazio) [\ref{Word:young}] and the cluster of patients with an age greater or equal than 25 years (resident in Lazio) [\ref{Word:old}]. The process models obtained are the following:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMinerYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMinerOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure}\\
+Looking at the process model we can see that the patients with an age lower than 25 years (resident in Lazio) [\ref{Word:young}] does not have the activities: `\textit{dead body}' and `\textit{dead in emergency room}', with respect to the cluster of patients with an age greater or equal than 25 years (resident in Lazio) [\ref{Word:old}]. However, the behaviour of the patients belonging to these two clusters is pretty equal; also the most frequent path is the same: `\textit{arrival}' $\Rightarrow$ `\textit{illness analysis}' $\Rightarrow$ `\textit{home}'. The derived social networks for both [\ref{Word:young}] and [\ref{Word:old}] are:
+\begin{figure*} [htbp]
+\includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoHoWYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\includegraphics[width=0.82\textwidth, keepaspectratio]{ProntoSoccorsoHoWOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure*}\\
+The main difference, which it’s pretty obvious, is that the number of resources involved in the cluster of patients with an age greater or equal than 25 years (resident in Lazio) [\ref{Word:old}] is more greater than the number of resources involved in the cluster of patients with an age lower than 25 years (resident in Lazio) [\ref{Word:young}]. In particular, the patients of the cluster [\ref{Word:old}] are transferred in a greater number of Institutes. Furthermore, there is the hospitalization ward `\textit{3403}' (oculistica) belonging only to the cluster [\ref{Word:old}]. The transition systems, on the \textit{sojourn time} point of view, are:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoSojournYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoSojournOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure} \\
+At first glance, looking at the two transition systems we can see that both states and arcs associated with activities belonging to the cluster [\ref{Word:old}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:young}] (the reason is always the same). Moreover, we can see that the most of time, for both the clusters [\ref{Word:young}] and [\ref{Word:old}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis.
+\clearpage
+\section{dataset Ricoveri}\label{analysis:3}
+The \setword{blueprint}{Word:ricoveriblueprint} in terms of process model is the following:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{RicoveriProcessModel2}
+\caption{Clinical path (Totality of Patients)}
+\end{figure}\\
+Looking at the figure, we can see that a patient can ask for a reservation, then he is accomodated in order to perform the surgical intervention. Notice that, before the surgical intervention, a patient can be transferred from a hospitalization ward to another one. After the surgical intervention a patient can be either directly discharged or submitted through a chain of secondary procedures that will end with the discharge of the patient. Notice that a patient may skip the surgical intervention. From the organizational point of view, the derived \setword{social network}{Word:ricoverisocialnetwork} is the following:
+\begin{figure} [htbp]
+\includegraphics[width=0.75\textwidth]{RicoveriSocialNetwork}
+\caption{Social Network (Totality of Patients)}
+\end{figure}\\
+The social network shows how the different hospitalization wards interact between each other. The semantic of the social network is the following: an arc from a hospitalization ward `\textit{x}' to another hospitalization ward `\textit{y}' means that exist at least a patient transferred from `\textit{x}' to `\textit{y}'. For example, if we take in consideration the hospitalization ward `\textit{3401}' (oculistica), there is at least a patient that is transferred to the hospitalization wards `\textit{3801}' (otorinolaringoiatria).
+\clearpage
+\noindent
+Regarding the performance perspective we have obtained:
+\begin{figure} [htbp]
+\includegraphics[width=0.82\textwidth]{RicoveriTransitionSystemSojourn}
+\caption{Sojourn Time}
+\end{figure}\\
+We can see that the most of time, from the \textit{sojourn time} point of view, is spent on the activity `\textit{reservation}' where the patient is waiting for the accomodation to be hospitalized. Also the transition from the accomodation state to the discharge state takes a very long time. The standard deviation of these different average times is very high, meaning that the patients are spread out over a wider range of time, therefore the mean is not significant at all. There are patients that behaves different from other patients. For this reason we have split in different clusters the set of patients in order to discover interesting properties. Since, the primary of a hospitalization ward has the goal to minimize the time of the overall hospitalization procedure of a patient, we wanted to understand the bottleneck activities which slow down the entire hospitalization procedure. Therefore, we have performed an ad-hoc analysis for the patients who performed only the main surgical intervention without any secondary procedure and transfers to other hospitalization wards (in order to make uniform the data for the analysis). Since, we're interested in three particular hospitalization wards we have defined three different cluster of patients:
+\begin{itemize}
+\item patients hospitalized in the hospitalization ward `\textit{0901}' (\setword{chirurgia generale}{Word:chirurgiagenerale}) 
+\item patients hospitalized in the hospitalization ward `\textit{2601}' (\setword{medicina generale}{Word:medicinagenerale})
+\item patients hospitalized in the hospitalization ward `\textit{3601}' (\setword{ortopedia e traumatologia}{Word:ortopediatraumatologia})
+\end{itemize}
+for each cluster we have looked on how the patients are distributed over the time and we selected a 5\% of patients with the lowest time duration of hospitalization procedure and a 5\% of patients with the highest time duration ofhospitalization procedure. From this two subclusters we discovered process models, social networks and transition systems (looking only at the sojourn time point of view).
+\newline
+We started the analysis with the cluster of patients hospitalized in the hospitalization ward \ref{Word:chirurgiagenerale}. The process model obtained is:
+\begin{figure} [htbp]
+\centering
+\includegraphics[width=\textwidth, keepaspectratio]{RicoveriInductiveVisualMiner0901}
+\caption{chirurgia generale}
+\end{figure}
+\newline
+From the picture, points out, the most of patients ask for a reservation instead of being directly accomodated. Regarding the social network, we got trivially, a social network made up by only one hospitalization ward, since we're considering only patients of `\textit{0901}' (chirurgia generale): 
+\begin{figure} [htbp]
+\centering
+\includegraphics[width=0.25\textwidth, keepaspectratio]{RicoveriSocialNetwork0901}
+\caption{chirurgia generale}
+\end{figure}
+\clearpage
+\noindent
+The derived transition system (sojourn time point of view) is:
+\begin{figure} [htbp]
+\includegraphics[width=0.25\textwidth , keepaspectratio]{RicoveriTransitionSystemSojourn0901}
+\caption{chirurgia generale}
+\end{figure}\\
+From the transition system points out that the patients take a very long time both to be accomodated and to be discharged. Then, we split the cluster \ref{Word:chirurgiagenerale} in two subclusters and we compared them between each other. For doing that, we first looked at the distribution of patients belonging to that cluster:
+\begin{figure} [htbp]
+\includegraphics[width=0.75\textwidth , keepaspectratio]{RicoveriChart}
+\caption{Distribution of patients based on time duration}
+\end{figure}\\
+The Y-axis represents the patients and the X-axis represent the time duration. The 5\% of patients with the lowest time duration of hospitalization procedure is lozalized in the bottom zone in red, instead the 5\% of patients with the highest time duration of hospitalization procedure is lozalized in the top zone in red. The process model obtained from the subclusters are the following:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth , keepaspectratio]{RicoveriInductiveVisualMiner0901Fast}
+\caption{5\% of patients with the lowest time duration of hospitalization (chirurgia generale)}
+\includegraphics[width=\textwidth , keepaspectratio]{RicoveriInductiveVisualMiner0901Slow}
+\caption{5\% of patients with the highest time duration of hospitalization (chirurgia generale)}
+\end{figure}\\
+The difference that points out is on the most frequent path taken by the patients belonging to the two different subclusters. All the 5\% of patients with the highest time duration of hospitalization (chirurgia generale) ask for a reservation, instead, the 5\% of patients with the slowest time duration of hospitalization (chirurgia generale) are directly accomodated for hospitalization. The social networks obtained are the same as the one obtained for the main cluster \ref{Word:chirurgiagenerale} and for this reason we won't show them. Instead, it's important to show the transition systems, on the sojourn time point of view:
+\begin{figure} [htbp]
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=0.7\textwidth]{RicoveriTransitionSystemSojourn0901Fast}
+\caption{5\% of patients with the lowest time duration of hospitalization (chirurgia generale)}
+\end{minipage}
+\begin{minipage}[t]{0.32\textwidth}
+\includegraphics[width=0.5\textwidth]{RicoveriTransitionSystemSojourn0901Slow}
+\caption{5\% of patients with the highest time duration of hospitalization (chirurgia generale)}
+\end{minipage}
+\end{figure}
+\clearpage
+\noindent
+The bottleneck is on the time that a patient is waiting for the accomodation (look at the red arrow). Moreover, also the time spent from the surgical intervention to the discharge of the patient is high (look at the yellow arrow). For the subclusters derived from \ref{Word:chirurgiagenerale}, we concluded:
+\begin{itemize}
+\item the hospitalization procedure is quick when the patients didn't ask for a reservation and they are directly accomodated for being hospitalized.
+\item the hospitalization procedure is mainly slowed down by the waiting time of the patients asking for the reservation but also on the time difference between the surgical intervention and the discharge of the patient (the primary of a hospitalization ward is more interested to minimize this time).
+\end{itemize}
+The procedure for the cluster \ref{Word:medicinagenerale} is impossible to be applied due to the small number of patients who performed only the main surgical intervention without transfers and secondary procedures (59 case IDs). On the other hand, we were able to analyze the cluster \ref{Word:ortopediatraumatologia}. The process model obtained is:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMiner3601}
+\caption{ortopedia e traumatologia}
+\end{figure}
+\newline
+From the picture, points out, the majority of patients belonging to \ref{Word:ortopediatraumatologia} asks for a reservetion in order to be accomodated for the hospitalization instead of being directly accomodated. Regarding the social network, we got trivially, a social network made up by only one hospitalization wards, since we're considering only patients of `\textit{3601}' (ortopedia e traumatologia): 
+\begin{figure} [htbp]
+\includegraphics[width=0.3\textwidth]{RicoveriSocialNetwork3601}
+\caption{ortopedia e traumatologia}
+\end{figure}
+\clearpage
+\noindent
+The derived transition system (on the sojourn time point of view) is:
+\begin{figure} [htbp]
+\includegraphics[width=0.22\textwidth]{RicoveriTransitionSystemSojourn0901}
+\caption{chirurgia generale}
+\end{figure}\\
+Then we have split the cluster \ref{Word:ortopediatraumatologia} in two subclusters and we compared them between each other. The distribution of patients belonging to that cluster is the following:
+\begin{figure} [htbp]
+\includegraphics[width=0.75\textwidth]{RicoveriChart3}
+\caption{Distribution of patients based on time duration}
+\end{figure}\\
+The Y-axis represents the patients and the X-axis represent the time duration. The 5\% of patients with the lowest time duration of hospitalization procedure is lozalized in the bottom zone in red, instead the 5\% of patients with the highest time duration of hospitalization procedure is lozalized in the top zone in red. 
+\clearpage
+\noindent
+The process models obtained are the following:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMiner3601Fast}
+\caption{5\% of patients with the lowest time duration of hospitalization (ortopedia e traumatologia)}
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMiner3601Slow}
+\caption{5\% of patients with the highest time duration of hospitalization (ortopedia e traumatologia)}
+\end{figure}\\
+The difference that points out is on the most frequent path taken by the patients belonging to the two different subclusters. The overall 5\% of patients with the highest time duration of hospitalization (ortopedia e traumatologia) ask for a reservation, instead, the 5\% of patients with the slowest time duration of hospitalization (ortopedia e traumatologia) is directly accomodated for hospitalization. The social networks obtained are the same as the one obtained for the main cluster \ref{Word:ortopediatraumatologia} and for this reason we won't show them. Instead, it's important to show the transition systems, on the sojourn time point of view:
+\begin{figure} [htbp]
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=0.7\textwidth]{RicoveriTransitionSystemSojourn3601Fast}
+\caption{5\% of patients with the lowest time duration of hospitalization (ortopedia e traumatologia)}
+\end{minipage}
+\begin{minipage}[t]{0.3\textwidth}
+\includegraphics[width=0.5\textwidth]{RicoveriTransitionSystemSojourn3601Slow}
+\caption{5\% of patients with the highest time duration of hospitalization (ortopedia e traumatologia)}
+\end{minipage}
+\end{figure}\\
+The bottleneck is on the time that a patient is waiting for the accomodation (look at the red arrow). Therefore, for the subclusters derived from \ref{Word:ortopediatraumatologia}, we concluded that the hospitalization procedure is mainly slowed down by the waiting time of the patients asking for the reservation of the hospitalization.\\
+After did this in-depth analysis, we considered the set of clusters: [\ref{Word:foreign}], [\ref{Word:italian}], [\ref{Word:young}],  [\ref{Word:old}]. The process models obtained for the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMinerForeigns}
+\caption{foreign patients}
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMinerItalian}
+\caption{italian patients}
+\end{figure}\\
+Both the process models are identical to the blueprint (in terms of behaviour of the patients), the only difference is on the number of process executions (264 for [\ref{Word:foreign}] and 9173 for [\ref{Word:italian}]). Furthermore, looking at both the figures, we can see that the majority of both foreign and italian patients ask for a reservation, then they are accomodated for being hospitalized and after the surgical intervention they are discharged. On the other hand, the derived social network for both the clusters of foreign [\ref{Word:foreign}] and italian patients [\ref{Word:italian}] are:
+\begin{figure} [htbp]
+\includegraphics[width=0.43\textwidth]{RicoveriSocialNetworkForeigns}
+\caption{foreign patients}
+\includegraphics[width=0.43\textwidth]{RicoveriSocialNetworkItalians}
+\caption{italian patients}
+\end{figure}\\
+From the social network of the cluster of foreign patients [\ref{Word:foreign}] we can see that the hospitalization ward `\textit{3401}'  is not involved in any social relations, meaning that the patients hospitalized in `\textit{3401}' (oculistica) won't be transferred in any other hospitalization wards. Instead, the social network of the cluster of italian patients [\ref{Word:italian}] is more or less equal to the \ref{Word:ricoverisocialnetwork} of the blueprint: it contains the same number of resources but the social relations are a subset. \\
+The transition systems, on the \textit{sojourn time} point of view, are:
+\begin{figure} [htbp]
+\begin{minipage}[t]{0.38\textwidth}
+\includegraphics[width=\textwidth]{RicoveriTransitionSystemSojournForeigns}
+\caption{foreign patients}
+\end{minipage}
+\begin{minipage}[t]{0.60\textwidth}
+\includegraphics[width=\textwidth]{RicoveriTransitionSystemSojournItalians}
+\caption{italian patients}
+\end{minipage}
+\end{figure}\\
+Looking at both the transition systems we can see the bottleneck is on the activity `\textit{reservation}'. We can see also that states and arcs associated with the cluster of italian patients are more thick than the states and arcs associated with the cluster of foreign patients, since the number of foreign patients is strictly lower than the number of italian patients.
+\clearpage
+\noindent
+At last, we have repeated the same steps for both the clusters [\ref{Word:young}], [\ref{Word:old}]. The derived process models are:
+\begin{figure} [htbp]
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMinerYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\includegraphics[width=\textwidth]{RicoveriInductiveVisualMinerOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure}\\
+The process models are similar but there are slightly differences: patients belonging to the cluster [\ref{Word:young}] performs only the `\textit{1st transfer}' and not the `\textit{2nd transfer}'. Morever, nobody of the patients belonging to [\ref{Word:young}] perform the activity `\textit{5th secondary procedure}'. Loooking at the process executions (463 for [\ref{Word:young}] and 8974 for [\ref{Word:old}]) we can see that the number of patients belonging to [\ref{Word:young}] are strictly lower than the number of patients belonging to [\ref{Word:old}].\\
+The derived social network for both the clusters [\ref{Word:young}] and [\ref{Word:old}] are:
+\begin{figure} [htbp]
+\includegraphics[width=0.45\textwidth]{RicoveriSocialNetworkYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\includegraphics[width=0.50\textwidth]{RicoveriSocialNetworkOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{figure}\\
+From the social network of patients belonging to the cluster [\ref{Word:young}] the resources involved in social relations are both `\textit{0901}' (chirurgia generale) and `\textit{2601}' (medicina generale), meaning that patients are transferred from the hospitalization ward `\textit{0901}' to `\textit{2601}' and viceversa. Instead, the social network of patients belonging to the cluster [\ref{Word:old}] is equal to the \ref{Word:ricoverisocialnetwork} of the blueprint.\\
+The transition systems, on the \textit{sojourn time} point of view, are:
+\begin{figure} [htbp]
+\centering
+\begin{minipage}[t]{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{RicoveriTransitionSystemSojournYoungs}
+\caption{patients with an age lower than 25 years (resident in Lazio)}
+\end{minipage}
+\begin{minipage}[t]{0.55\textwidth}
+\centering
+\includegraphics[width=\textwidth]{RicoveriTransitionSystemSojournOlds}
+\caption{patients with an age greater or equal than 25 years (resident in Lazio)}
+\end{minipage}
+\end{figure}\\
+Looking at both the transition systems we can see the bottleneck is on the activities `\textit{reservation}' and `\textit{accomodation}' (only for patients belonging to [\ref{Word:young}]). We can see also that states and arcs associated with the cluster [\ref{Word:old}] are more thick than the states and arcs associated with the cluster of [\ref{Word:young}], since the number of patients with an age lower than 25 years (resident in Lazio) is strictly lower than the number of patients with an age greater or equal than 25 years (resident in Lazio).
 \section{Conclusions} \label{conclusions}
+In this paper, we have focused on the applicability of process mining in the healthcare domain. We have focused on the analysis of the results obtained for our case study. In particular, we have used the raw datasets of \hospital in order to discover several non-trivial care processes, social networks and transition systems by using the ProM framework. Thus, we have shown that is possible to mine complex hospital processes giving insights into the process, that is, with existing techniques we were able to derive an understandable model for all the patients. In particular, we focused on obtaining insights into the careflow by looking at
+the control flow perspective and presenting the results showing the differences between the process models of the different cluster of patients. We have also look on the organizational perspective of the process models describing how the resources can communicate among them. In conclusion, we have also looked on the performance perspective of process models, analyzing the transition systems obtained from relevant event logs.
+
+
+\begin{comment}
 % For one-column wide figures use
 \begin{figure}
 % Use the relevant command to insert your figure file.
@@ -206,7 +551,7 @@ number & number & number \\
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
-
+\end{comment}
 
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
@@ -231,7 +576,7 @@ number & number & number \\
 Author, Article title, Journal, Volume, page numbers (year)
 % Format for books
 \bibitem{RefB}
-Author, Book title, page numbers. Publisher, place (year)
+WilM. P. van der Aalst, ProcessMining: Discovery, Conformance and Enhancement of Business Processes, page numbers. Publisher, place (year)
 % etc
 \end{thebibliography}
 

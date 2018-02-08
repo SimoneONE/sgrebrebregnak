@@ -118,7 +118,7 @@ grestore
 \begin{abstract}
 %Insert your abstract here. Include keywords, PACS and mathematical
 %subject classification numbers as needed.
-The healthcare organizations are under increasing pressure to improve productivity, gain competitive advantage and reduce costs. For this reason, healthcare organizations, such as hospitals try to streamline their processes. In this paper we demonstrate the applicability of process mining in the healthcare domain, using a real case study of \hospital in Rome (GVM Group). We apply process mining techniques to obtain meaningful knowledge about the patient careflows from so-called event logs, obtained from raw data of hospital information systems. We analyzed these logs using the ProM framework from three different perspectives: the control flow perspective, the organizational perspective and the timing perspective. The results show that process mining can be used to provide new insights that facilitate the improvement of existing careflows.
+The healthcare organizations are under increasing pressure to improve productivity, gain competitive advantage and reduce costs. For this reason, healthcare organizations, such as hospitals try to streamline their processes. In this paper we demonstrate the applicability of process mining in the healthcare domain, using a real case study of \hospital in Rome (GVM Group). We apply process mining techniques to obtain meaningful knowledge about the patient careflows from so-called event logs, obtained from raw data of hospital information systems. We analyzed these logs using the ProM framework from three different perspectives: the control flow perspective, the organizational perspective and the performance perspective. The results show that process mining can be used to provide new insights that facilitate the improvement of existing careflows.
 \keywords{Process mining \and Healthcare \and ProM}
 % \PACS{PACS code1 \and PACS code2 \and more}
 % \subclass{MSC code1 \and MSC code2 \and more}
@@ -151,7 +151,7 @@ These three datasets contain raw data about patients treated in both year 2016 a
 In this section, we discuss the results obtained by applying process mining techniques (process discovery, social network analysis and performance analysis) on the datasets of \hospital already `\textit{converted}' to event logs: `\textit{Ambulatori}', `\textit{Pronto soccorso}' and `\textit{Ricoveri}'. The process mining techniques we used for discovering the process model of the totality of patients (blueprint) are: the \textit{Alpha Miner} algorithm, the \textit{Heuristic Miner} algorithm and the \textit{Inductive Miner} algorithm. In order to establish which process model out of three is representing better the behaviour observed in the event log, and therefore which mining algorithm is the best, we computed the four quality metrics replay fitness, precision, generalization and simplicity. ProM 6.7 allows to compute replay fitness, precision and generalization only. Therefore simplicity is calculated on the basis of this metric: \#$activities \;+\;$\#$splits \;+\; $\#$joins$. The grater is the value, the less is the simplicity of the process model. At the end, the best algorithm will be chosen on the basis of the just mentioned quality metrics. Since the inductive visual miner is high parametrisable (i.e., we can set a-priori the replay fitness we would like to reach in order to obtain a process model in function of this fitness value) therefore it's the algorithm with the best compromise between the just mentioned quality metrics. For this reason, we picked the inductive visual miner as process discovery technique. After discovered the blueprint of all the three datasets, we have performed ad-hoc analysis for these set of clusters:
 \begin{itemize}
 \item foreign patients [\setword{1}{Word:foreign}] vs. italian patients [\setword{2}{Word:italian}]
-\item patients with an age lower or equal than 25 years (resident in Latium)[\setword{3}{Word:young}] vs. patients with an age greater than 25 years (resident in Latium) [\setword{4}{Word:old}]
+\item patients with an age lower than 25 years (resident in Latium)[\setword{3}{Word:young}] vs. patients with an age greater or equal than 25 years (resident in Latium) [\setword{4}{Word:old}]
 \end{itemize}
 Only for `\textit{Ricoveri}' dataset we have performed a further in depth analysis for these specialist branches: \textit{chirurgia generale}, \textit{medicina generale} and \textit{ortopedia and traumatologia} looking at both pre-operative hospitalization time (the time a patient is waiting for the surgical intervention) and post-operative hospitalization time (the time a patient is waiting for being discharged).
 \clearpage
@@ -223,37 +223,37 @@ The avg sojourn time of both the clusters is equal (more or less) to the one of 
 Now we can consider another set of clusters: patients belonging both to [\ref{Word:young}] and [\ref{Word:old}]. The derived process models are the following:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth]{AmbulatoriInductiveVisualMinerYoungs}
-\caption{Clinical path ($\leq$25 years)}
+\caption{Clinical path ($<$25 years)}
 \includegraphics[width=\textwidth]{AmbulatoriInductiveVisualMinerOlds}
-\caption{Clinical path ($>$25 years)}
+\caption{Clinical path ($\geq$25 years)}
 \end{figure}\\
 Both the process models are identical to the \ref{Word:bpprocmod}, but there are an interesting difference regarding the behaviour of the patients belonging to both the clusters [\ref{Word:young}] and [\ref{Word:old}], in particular regarding the most frequent path. The most frequent path taken by the patients with an age lower than 25 years (resident in Latium) is the one made up by the `\textit{healthcare provision}' activity (they go directly in outpatient clinic), instead, the most frequent path taken by the patients with an age grater or equal than 25 years (resident in Latium) is made up by the following activities: `\textit{prescription}' $ \rightarrow $ `\textit{reservation}' $ \rightarrow$ `\textit{healthcare provision}' (they take the medical prescription, then they ask for a reservation for perfoming the healthcare provision). Another difference which points out is on the number of process executions (9881 for [\ref{Word:young}] and 96506 for [\ref{Word:old}]).\\
 From the organizational point of view, the social networks derived from both the clusters [\ref{Word:young}] and [\ref{Word:old}] are as follows:
 \begin{figure} [htbp]
 \begin{minipage}[t]{0.5\textwidth}
 \includegraphics[width=0.89\textwidth]{AmbulatoriSocialNetworkYoungs}
-\caption{Social network ($\leq$25 years)}
+\caption{Social network ($<$25 years)}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
 \includegraphics[width=\textwidth]{AmbulatoriSocialNetworkOlds}
-\caption{Social network ($>$25 years)}
+\caption{Social network ($\geq$25 years)}
 \end{minipage}
 \end{figure}\\
 Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:young}] and [\ref{Word:old}] involve the same resources as the blueprint \ref{Word:ambsocnet}. The main difference is on the outpatient clinic `\textit{4301}' (Urologia): the patients with an age lower than 25 years (resident in Latium) go in this outpatient clinic without medical prescription, instead, the patients with an age greater or equal than 25 years (resident in Latium) go in this outpatient clinic with a medical prescription compiled only by `\textit{1}' (medico di medicina generale). This means all the patients belonging to the cluster [\ref{Word:young}] going in `\textit{4301}' (Urologia) perform only one activity, the `\textit{healthcare provision}'activity:
 \begin{figure} [htbp]
 \includegraphics[width=0.45\textwidth]{AmbulatoriInductiveVisualMinerYoungs4301}
-\caption{Urologia ($\leq$25 years)}
+\caption{Urologia ($<$25 years)}
 \end{figure}\\
 Moreover, patients belonging from [\ref{Word:young}] go in both outpatient clinics `\textit{5801}' (Gastroenterologia) and `\textit{0901}' (Chirurgia generale) with medical prescriptions compiled only by `\textit{1}' (medico di medicina generale). For patients belonging from [\ref{Word:old}] there are also cases of medical prescriptions compiled by `\textit{2}' (medico specialista dipendente da struttura pubblica).\\
 Looking at the performance perspective, in particular at the \textit{sojourn time} point of view, we obtained:
 \begin{figure} [htbp]
 \begin{minipage}[t]{0.5\textwidth}
 \includegraphics[width=0.5\textwidth]{AmbulatorioSojournYoungs}
-\caption{Transition system ($\leq$25 years)}
+\caption{Transition system ($<$25 years)}
 \end{minipage}
 \begin{minipage}[t]{0.5\textwidth}
 \includegraphics[width=0.55\textwidth]{AmbulatorioSojournOlds}
-\caption{Transition system ($>$25 years)}
+\caption{Transition system ($\geq$25 years)}
 \end{minipage}
 \end{figure}\\
 At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:old}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:young}], since the cluster [\ref{Word:young}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:old}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:young}] and [\ref{Word:old}], is spent on the activity `\textit{reservation}' where a patient is waiting for the healthcare provision. % the average sojourn time for this activity is 31 days 1 hour for patients belonging to [\ref{Word:young}] and 35 days 17 hours for patients belonging to [\ref{Word:old}].
@@ -310,34 +310,34 @@ Looking at the pictures, the social networks of the patients belonging from both
 \includegraphics[width=\textwidth]{ProntoSoccorsoSojournItalians}
 \caption{Transition system (Italian patients)}
 \end{figure} \newline
-At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:italian}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:foreign}], since the cluster [\ref{Word:foreign}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:italian}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis. The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint. Then, we have considered both the clusters of patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}] and the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}]. 
+At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:italian}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:foreign}], since the cluster [\ref{Word:foreign}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:italian}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis. The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint. Then, we have considered both the clusters of patients with an age lower than 25 years (resident in Latium) [\ref{Word:young}] and the cluster of patients with an age greater or equal than 25 years (resident in Latium) [\ref{Word:old}]. 
 \clearpage
 \noindent
 The process models obtained are the following:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMinerYoungs}
-\caption{Clinical path ($\leq$25 years)}
+\caption{Clinical path ($<$25 years)}
 \includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMinerOlds}
-\caption{Clinical path ($>$25 years)}
-\end{figure}
-Looking at the process model we can see that the patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}] does not have the activities: `\textit{dead body}' and `\textit{dead in emergency room}', with respect to the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}]. However, the behaviour of the patients belonging to these two clusters is pretty equal; also the most frequent path is the same: `\textit{arrival}' $\Rightarrow$ `\textit{illness analysis}' $\Rightarrow$ `\textit{home}'.
+\caption{Clinical path ($\geq$25 years)}
+\end{figure}\\
+Looking at the process model we can see that the patients with an age lower than 25 years (resident in Latium) [\ref{Word:young}] does not have the activities: `\textit{dead body}' and `\textit{dead in emergency room}', with respect to the cluster of patients with an age greater or equal than 25 years (resident in Latium) [\ref{Word:old}]. However, the behaviour of the patients belonging to these two clusters is pretty equal; also the most frequent path is the same: `\textit{arrival}' $\Rightarrow$ `\textit{illness analysis}' $\Rightarrow$ `\textit{home}'.
 \clearpage
 \noindent
 The derived social networks for both [\ref{Word:young}] and [\ref{Word:old}] are:
 
 \begin{figure} [htbp]
 \includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoHoWYoungs}
-\caption{Social network ($\leq$25 years)}
+\caption{Social network ($<$25 years)}
 \includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoHoWOlds}
-\caption{Social network ($>$25 years)}
+\caption{Social network ($\geq$25 years)}
 \end{figure}
 \noindent
-The main difference, which it’s pretty obvious, is that the number of resources involved in the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}] is more greater than the number of resources involved in the cluster of patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}]. In particular, the patients of the cluster [\ref{Word:old}] are transferred in a greater number of Institutes. Furthermore, there is the hospitalization ward `\textit{3403}' (oculistica) belonging only to the cluster [\ref{Word:old}]. The transition systems, on the \textit{sojourn time} point of view, are:
+The main difference, which it’s pretty obvious, is that the number of resources involved in the cluster of patients with an age greater or equal than 25 years (resident in Latium) [\ref{Word:old}] is more greater than the number of resources involved in the cluster of patients with an age lower than 25 years (resident in Latium) [\ref{Word:young}]. In particular, the patients of the cluster [\ref{Word:old}] are transferred in a greater number of Institutes. Furthermore, there is the hospitalization ward `\textit{3403}' (oculistica) belonging only to the cluster [\ref{Word:old}]. The transition systems, on the \textit{sojourn time} point of view, are:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoSojournYoungs}
-\caption{Transition system ($\leq$25 years)}
+\caption{Transition system ($<$25 years)}
 \includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoSojournOlds}
-\caption{Transition system ($>$25 years)}
+\caption{Transition system ($\geq$25 years)}
 \end{figure} \\
 At first glance, looking at the two transition systems we can see that both states and arcs associated with activities belonging to the cluster [\ref{Word:old}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:young}] (the reason is always the same). Moreover, we can see that the most of time, for both the clusters [\ref{Word:young}] and [\ref{Word:old}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis.
 \clearpage
@@ -500,34 +500,34 @@ Looking at both the transition systems we can see the bottleneck is on the activ
 At last, we have repeated the same steps for both the clusters [\ref{Word:young}], [\ref{Word:old}]. The derived process models are:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth]{RicoveriInductiveVisualMinerYoungs}
-\caption{Clinical path ($\leq$25 years)}
+\caption{Clinical path ($<$25 years)}
 \includegraphics[width=\textwidth]{RicoveriInductiveVisualMinerOlds}
-\caption{Clinical path ($>$25 years)}
+\caption{Clinical path ($\geq$25 years)}
 \end{figure}\\
 The process models are similar but there are slightly differences: patients belonging to the cluster [\ref{Word:young}] performs only the `\textit{1st transfer}' and not the `\textit{2nd transfer}'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 . Note that the process model for [\ref{Word:old}] presents deviations regarding transfers, since they can happen also after the surgical intervention. Loooking at the process executions (1399 for [\ref{Word:young}] and 8038 for [\ref{Word:old}]) we can see that the number of patients belonging to [\ref{Word:young}] are strictly lower than the number of patients belonging to [\ref{Word:old}].\\
 The derived social network for both the clusters [\ref{Word:young}] and [\ref{Word:old}] are:
 \begin{figure} [htbp]
 \begin{minipage}[t]{0.4\textwidth}
 \includegraphics[width=\textwidth]{RicoveriSocialNetworkYoungs}
-\caption{Social network ($\leq$25 years)}
+\caption{Social network ($<$25 years)}
 \end{minipage}
 \begin{minipage}[t]{0.6\textwidth}
 \includegraphics[width=0.9\textwidth]{RicoveriSocialNetworkOlds}
-\caption{Social network ($>$25 years)}
+\caption{Social network ($\geq$25 years)}
 \end{minipage}
 \end{figure}\\
 From the social network of patients belonging to the cluster [\ref{Word:young}] the resources involved in social relations are both `\textit{0901}' (chirurgia generale) and `\textit{2601}' (medicina generale), meaning that patients are transferred from the hospitalization ward `\textit{0901}' to `\textit{2601}' and viceversa. Instead, the social network of patients belonging to the cluster [\ref{Word:old}] is equal to the \ref{Word:ricoverisocialnetwork} of the blueprint. The transition systems, on the \textit{sojourn time} point of view, are:
 \begin{figure} [htbp]
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{RicoveriTransitionSystemSojournYoungs}
-\caption{Transition system ($\leq$25 years)}
+\caption{Transition system ($<$25 years)}
 \end{minipage}
 \begin{minipage}[t]{0.55\textwidth}
 \includegraphics[width=\textwidth]{RicoveriTransitionSystemSojournOlds}
-\caption{Transition system ($>$25 years)}
+\caption{Transition system ($\geq$25 years)}
 \end{minipage}
 \end{figure}\\
-Looking at both the transition systems we can see the bottleneck is on the activities `\textit{reservation}' and `\textit{accomodation}' (only for patients belonging to [\ref{Word:young}]). We can see also that states and arcs associated with the cluster [\ref{Word:old}] are more thick than the states and arcs associated with the cluster of [\ref{Word:young}], since the number of patients with an age lower or equal than 25 years (resident in Latium) is strictly lower than the number of patients with an age greater than 25 years (resident in Latium).
+Looking at both the transition systems we can see the bottleneck is on the activities `\textit{reservation}' and `\textit{accomodation}' (only for patients belonging to [\ref{Word:young}]). We can see also that states and arcs associated with the cluster [\ref{Word:old}] are more thick than the states and arcs associated with the cluster of [\ref{Word:young}], since the number of patients with an age lower than 25 years (resident in Latium) is strictly lower than the number of patients with an age greater or equal than 25 years (resident in Latium).
 \clearpage
 \noindent
 \section{Conclusions} \label{conclusions}

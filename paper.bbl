@@ -1,0 +1,158 @@
+\begin{thebibliography}{}
+
+\bibitem[Aalst et~al., 2009]{20}
+Aalst, Wil M.~P., Boudewijn F.~van Dongen, Christian W.~Günther, Anne Rozinat,
+  Eric Verbeek, \& A~Weijters 2009.
+\newblock ProM: The Process Mining Toolkit.
+
+\bibitem[Aalst et~al., 2018]{28}
+Aalst, Wil M.~P., Vladimir Rubin, B~F~Van~Dongen, E~Kindler, \& C~W~Günther
+  2018.
+\newblock Process mining: A two-step approach using transition systems and
+  regions.
+
+\bibitem[Buijs, 2010]{12}
+Buijs, Joos 2010.
+\newblock Mapping Data Sources to XES in a Generic Way.
+\newblock Master's thesis, Eindhoven University of Technology.
+
+\bibitem[Buijs, 2017]{2}
+Buijs, Joos 2017 (accessed December 29, 2017).
+\newblock Introduction to Process Mining with ProM.
+
+\bibitem[Buijs et~al., 2017]{3}
+Buijs, Joos, et~al.  2017 (accessed December 29, 2017).
+\newblock Process Mining in Healthcare.
+
+\bibitem[Buijs et~al., 2012]{5}
+Buijs, Joos C. A.~M., Boudewijn~F. van Dongen, \& Wil M.~P. van~der Aalst 2012.
+\newblock On the Role of Fitness, Precision, Generalization and Simplicity in
+  Process Discovery, pages 305--322.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Buijs et~al., 2014]{33}
+Buijs, J. C. A.~M., B.~F. van Dongen, \& W.~M.~P. van~der Aalst 2014.
+\newblock Quality Dimensions in Process Discovery: The Importance of Fitness,
+  Precision, Generalization and Simplicity.
+\newblock International Journal of Cooperative Information Systems,
+  23(01):1440001.
+
+\bibitem[Cardoso et~al., 2006]{11}
+Cardoso, J., J.~Mendling, G.~Neumann, \& H.~A. Reijers 2006.
+\newblock A Discourse on Complexity of Process Models, pages 117--128.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Gruhn \& Laue, ]{25}
+Gruhn, Volker, \& Ralf Laue.
+\newblock Complexity metrics for business process models.
+\newblock In in: W. Abramowicz, H.C. Mayr (Eds.), 9th International Conference
+  on Business Information Systems (BIS 2006), Lecture Notes in Informatics,
+  pages 1--12.
+
+\bibitem[Leemans et~al., 2014]{8}
+Leemans, Sander J.~J., Dirk Fahland, \& Wil M.~P. van~der Aalst 2014.
+\newblock Discovering Block-Structured Process Models from Event Logs
+  Containing Infrequent Behaviour, pages 66--78.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Leemans et~al., 2015]{24}
+Leemans, Sander J.~J., Dirk Fahland, \& Wil M.~P. van~der Aalst 2015.
+\newblock Exploring Processes and Deviations, pages 304--316.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Leemans et~al., 2016]{23}
+Leemans, Sander J.~J., Dirk Fahland, \& Wil M.~P. van~der Aalst 2016.
+\newblock Using Life Cycle Information in Process Discovery, pages 204--217.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Mans et~al., 2009]{4}
+Mans, R.~S., M.~H. Schonenberg, M.~Song, W.~M.~P. van~der Aalst, \& P.~J.~M.
+  Bakker 2009.
+\newblock Application of Process Mining in Healthcare -- A Case Study in a
+  Dutch Hospital, pages 425--438.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Rojas et~al., 2016]{22}
+Rojas, Eric, Jorge Munoz-Gama, Marcos Sepúlveda, \& Daniel Capurro 2016.
+\newblock Process mining in healthcare: A literature review.
+\newblock Journal of Biomedical Informatics, 61(Supplement C):224 -- 236.
+
+\bibitem[Rozinat \& van~der Aalst, 2008]{32}
+Rozinat, A., \& W.M.P. van~der Aalst 2008.
+\newblock Conformance checking of processes based on monitoring real behavior.
+\newblock Information Systems, 33(1):64 -- 95.
+
+\bibitem[Russo \& Mecella, 2013]{14}
+Russo, Alessandro, \& Massimo Mecella 2013.
+\newblock On the evolution of process-oriented approaches for healthcare
+  workflows.
+\newblock International Journal of Business Process Integration and Management,
+  6(3):224--246.
+\newblock PMID: 56962.
+
+\bibitem[Song \& Aalst, 2007]{29}
+Song, Minseok, \& Wil M.~P. Aalst 2007.
+\newblock Supporting Process Mining by Showing Events at a Glance.
+
+\bibitem[van~der Aalst et~al., 2011]{6}
+van~der Aalst, W.M.P., M.H. Schonenberg, \& M.~Song 2011.
+\newblock Time prediction based on process mining.
+\newblock Information Systems, 36(2):450 -- 475.
+\newblock Special Issue: Semantic Integration of Data, Multimedia, and
+  Services.
+
+\bibitem[van~der Aalst et~al., 2003]{27}
+van~der Aalst, W.M.P., A.J.M.M. Weijter, \& L.~Maruster 2003.
+\newblock Workflow Mining: Discovering process models from event logs.
+\newblock IEEE Transactions on Knowledge and Data Engineering, 16:2004.
+
+\bibitem[van~der Aalst, 2011]{1}
+van~der Aalst, Wil M.~P. 2011.
+\newblock Process Mining: Discovery, Conformance and Enhancement of Business
+  Processes.
+\newblock Springer Publishing Company, Incorporated.
+
+\bibitem[van~der Aalst et~al., 2010]{9}
+van~der Aalst, Wil M.~P., Maja Pesic, \& Minseok Song 2010.
+\newblock Beyond Process Mining: From the Past to Present and Future, pages
+  38--52.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[van~der Aalst et~al., 2005]{7}
+van~der Aalst, Wil M.~P., Hajo~A. Reijers, \& Minseok Song 2005.
+\newblock Discovering Social Networks from Event Logs.
+\newblock Computer Supported Cooperative Work (CSCW), 14(6):549--593.
+
+\bibitem[van~der Aalst \& Song, 2004]{30}
+van~der Aalst, Wil M.~P., \& Minseok Song 2004.
+\newblock Mining Social Networks: Uncovering Interaction Patterns in Business
+  Processes, pages 244--260.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[van~der Aalst \& van Dongen, 2013]{26}
+van~der Aalst, Wil M.~P., \& Boudewijn~F. van Dongen 2013.
+\newblock Discovering Petri Nets from Event Logs, pages 372--422.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[van Dongen et~al., 2016]{31}
+van Dongen, B.~F., J.~Carmona, \& T.~Chatain 2016.
+\newblock A Unified Approach for Measuring Precision and Generalization Based
+  on Anti-alignments, pages 39--56.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Verbeek et~al., 2011]{34}
+Verbeek, H. M.~W., Joos C. A.~M. Buijs, Boudewijn~F. van Dongen, \& Wil M.~P.
+  van~der Aalst 2011.
+\newblock XES, XESame, and ProM 6, pages 60--75.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Verbeek, 2013]{18}
+Verbeek, H. M. W.~(Eric) 2013.
+\newblock BPI Challenge 2012: The Transition System Case, pages 225--226.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Weijters et~al., 2006]{21}
+Weijters, A, Wil M.~P. Aalst, \& Alves A~K~Medeiros 2006.
+\newblock Process Mining with the Heuristics Miner-algorithm.
+
+\end{thebibliography}

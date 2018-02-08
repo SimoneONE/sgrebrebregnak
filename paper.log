@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.7)  8 FEB 2018 21:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.11.7)  8 FEB 2018 23:11
 entering extended mode
 **./paper.tex
 (paper.tex
@@ -345,13 +345,14 @@ LaTeX Info: Redefining \nameref on input line 71.
 \big@size=\dimen122
 
 SVJour3 warning: Missing \journalname
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
 
 Package mathptmx Warning: There are no bold math fonts on input line 117.
 
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 117.
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 11
 7.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
@@ -375,11 +376,13 @@ LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 11
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.03004> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.70006> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 117.
@@ -388,241 +391,245 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 ] [3
 
 ]
-<AmbulatoriInductiveVisualMiner.png, id=45, 855.195pt x 90.3375pt>
+<AmbulatoriInductiveVisualMiner.png, id=37, 855.195pt x 90.3375pt>
 File: AmbulatoriInductiveVisualMiner.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMiner.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMiner.png used on input line 
 161.
-(pdftex.def)             Requested size: 338.0pt x 35.70427pt.
+(pdftex.def)             Requested size: 347.0pt x 36.65402pt.
 
-<AmbulatoriSocialNetwork.png, id=46, 438.8897pt x 453.19313pt>
+<AmbulatoriSocialNetwork.png, id=38, 438.8897pt x 453.19313pt>
 File: AmbulatoriSocialNetwork.png Graphic file (type png)
 
 <use AmbulatoriSocialNetwork.png>
 Package pdftex.def Info: AmbulatoriSocialNetwork.png used on input line 166.
-(pdftex.def)             Requested size: 253.5pt x 261.76651pt.
+(pdftex.def)             Requested size: 260.25pt x 268.737pt.
 
-<AmbulatoriInductiveVisualMiner5701.png, id=48, 472.01344pt x 84.315pt>
+<AmbulatoriInductiveVisualMiner5701.png, id=40, 472.01344pt x 84.315pt>
 File: AmbulatoriInductiveVisualMiner5701.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMiner5701.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMiner5701.png used on input l
 ine 171.
-(pdftex.def)             Requested size: 169.0pt x 30.18869pt.
+(pdftex.def)             Requested size: 173.5pt x 30.99277pt.
 
-<AmbulatoriTransitionSystemSojourn.png, id=49, 158.09062pt x 338.01282pt>
+<AmbulatoriTransitionSystemSojourn.png, id=41, 158.09062pt x 338.01282pt>
 File: AmbulatoriTransitionSystemSojourn.png Graphic file (type png)
 
 <use AmbulatoriTransitionSystemSojourn.png>
 Package pdftex.def Info: AmbulatoriTransitionSystemSojourn.png used on input li
 ne 176.
-(pdftex.def)             Requested size: 101.40103pt x 216.80711pt.
+(pdftex.def)             Requested size: 104.10106pt x 222.58368pt.
 
-<AmbulatoriInductiveVisualMinerForeigns.png, id=52, 854.44218pt x 91.09032pt>
+<AmbulatoriInductiveVisualMinerForeigns.png, id=44, 854.44218pt x 91.09032pt>
 File: AmbulatoriInductiveVisualMinerForeigns.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMinerForeigns.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMinerForeigns.png used on inp
 ut line 182.
-(pdftex.def)             Requested size: 338.0pt x 36.0324pt.
+(pdftex.def)             Requested size: 347.0pt x 36.99283pt.
 
-<AmbulatoriInductiveVisualMinerItalians.png, id=53, 857.45343pt x 80.55093pt>
+<AmbulatoriInductiveVisualMinerItalians.png, id=45, 857.45343pt x 80.55093pt>
 File: AmbulatoriInductiveVisualMinerItalians.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMinerItalians.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMinerItalians.png used on inp
 ut line 186.
-(pdftex.def)             Requested size: 338.0pt x 31.75273pt.
+(pdftex.def)             Requested size: 347.0pt x 32.59836pt.
  [4
 
  <./AmbulatoriInductiveVisualMiner.png> <./AmbulatoriSocialNetwork.png>] [5 <./
 AmbulatoriInductiveVisualMiner5701.png> <./AmbulatoriTransitionSystemSojourn.pn
 g> <./AmbulatoriInductiveVisualMinerForeigns.png>]
-<AmbulatoriSocialNetworkForeigns.png, id=77, 364.36125pt x 435.87843pt>
+<AmbulatoriSocialNetworkForeigns.png, id=69, 364.36125pt x 435.87843pt>
 File: AmbulatoriSocialNetworkForeigns.png Graphic file (type png)
 
 <use AmbulatoriSocialNetworkForeigns.png>
 Package pdftex.def Info: AmbulatoriSocialNetworkForeigns.png used on input line
  193.
-(pdftex.def)             Requested size: 126.75pt x 151.6286pt.
+(pdftex.def)             Requested size: 130.125pt x 155.66573pt.
 
-<AmbulatoriSocialNetworkItalians.png, id=78, 381.67593pt x 403.5075pt>
+<AmbulatoriSocialNetworkItalians.png, id=70, 381.67593pt x 403.5075pt>
 File: AmbulatoriSocialNetworkItalians.png Graphic file (type png)
 
 <use AmbulatoriSocialNetworkItalians.png>
 Package pdftex.def Info: AmbulatoriSocialNetworkItalians.png used on input line
  197.
-(pdftex.def)             Requested size: 140.27031pt x 148.29184pt.
+(pdftex.def)             Requested size: 144.00531pt x 152.2385pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 192--200
 [][] [] 
  []
 
 
-<AmbulatoriInductiveVisualMinerForeigns4301.png, id=82, 472.01344pt x 84.315pt>
+<AmbulatoriInductiveVisualMinerForeigns4301.png, id=74, 472.01344pt x 84.315pt>
 File: AmbulatoriInductiveVisualMinerForeigns4301.png Graphic file (type png)
 <use AmbulatoriInductiveVisualMinerForeigns4301.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMinerForeigns4301.png used on
  input line 204.
-(pdftex.def)             Requested size: 169.0pt x 30.18869pt.
+(pdftex.def)             Requested size: 173.5pt x 30.99277pt.
  [6 <./AmbulatoriInductiveVisualMinerItalians.png> <./AmbulatoriSocialNetworkFo
 reigns.png> <./AmbulatoriSocialNetworkItalians.png> <./AmbulatoriInductiveVisua
 lMinerForeigns4301.png>]
-<AmbulatorioSojournForeigns.png, id=93, 146.04562pt x 356.83313pt>
+<AmbulatorioSojournForeigns.png, id=85, 146.04562pt x 356.83313pt>
 File: AmbulatorioSojournForeigns.png Graphic file (type png)
 
 <use AmbulatorioSojournForeigns.png>
 Package pdftex.def Info: AmbulatorioSojournForeigns.png used on input line 212.
 
-(pdftex.def)             Requested size: 84.5pt x 206.46242pt.
+(pdftex.def)             Requested size: 86.75pt x 211.9617pt.
 
-<AmbulatorioSojournItalians.png, id=94, 151.3153pt x 355.3275pt>
+<AmbulatorioSojournItalians.png, id=86, 151.3153pt x 355.3275pt>
 File: AmbulatorioSojournItalians.png Graphic file (type png)
 
 <use AmbulatorioSojournItalians.png>
 Package pdftex.def Info: AmbulatorioSojournItalians.png used on input line 216.
 
-(pdftex.def)             Requested size: 84.5pt x 198.429pt.
+(pdftex.def)             Requested size: 86.75pt x 203.70988pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 211--219
 [][] [] 
  []
 
-<AmbulatoriInductiveVisualMinerYoungs.png, id=101, 855.94781pt x 88.83188pt>
+<AmbulatoriInductiveVisualMinerYoungs.png, id=93, 855.94781pt x 88.83188pt>
 File: AmbulatoriInductiveVisualMinerYoungs.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMinerYoungs.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMinerYoungs.png used on input
  line 225.
-(pdftex.def)             Requested size: 338.0pt x 35.07803pt.
+(pdftex.def)             Requested size: 347.0pt x 36.01195pt.
 
-<AmbulatoriInductiveVisualMinerOlds.png, id=102, 857.45343pt x 85.06781pt>
+<AmbulatoriInductiveVisualMinerOlds.png, id=94, 857.45343pt x 85.06781pt>
 File: AmbulatoriInductiveVisualMinerOlds.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMinerOlds.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMinerOlds.png used on input l
 ine 227.
-(pdftex.def)             Requested size: 338.0pt x 33.53326pt.
+(pdftex.def)             Requested size: 347.0pt x 34.4263pt.
 
-<AmbulatoriSocialNetworkYoungs.png, id=110, 381.67593pt x 455.45157pt>
+<AmbulatoriSocialNetworkYoungs.png, id=102, 381.67593pt x 455.45157pt>
 File: AmbulatoriSocialNetworkYoungs.png Graphic file (type png)
 
 <use AmbulatoriSocialNetworkYoungs.png>
 Package pdftex.def Info: AmbulatoriSocialNetworkYoungs.png used on input line 2
 34.
-(pdftex.def)             Requested size: 150.4099pt x 179.48094pt.
+(pdftex.def)             Requested size: 154.41489pt x 184.26228pt.
 
-<AmbulatoriSocialNetworkOlds.png, id=111, 381.67593pt x 403.5075pt>
+<AmbulatoriSocialNetworkOlds.png, id=103, 381.67593pt x 403.5075pt>
 File: AmbulatoriSocialNetworkOlds.png Graphic file (type png)
 
 <use AmbulatoriSocialNetworkOlds.png>
 Package pdftex.def Info: AmbulatoriSocialNetworkOlds.png used on input line 238
 .
-(pdftex.def)             Requested size: 169.0pt x 178.66443pt.
+(pdftex.def)             Requested size: 173.5pt x 183.4238pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 233--241
 [][] [] 
  []
 
 
-<AmbulatoriInductiveVisualMinerYoungs4301.png, id=116, 469.755pt x 79.79813pt>
+<AmbulatoriInductiveVisualMinerYoungs4301.png, id=108, 469.755pt x 79.79813pt>
 File: AmbulatoriInductiveVisualMinerYoungs4301.png Graphic file (type png)
 
 <use AmbulatoriInductiveVisualMinerYoungs4301.png>
 Package pdftex.def Info: AmbulatoriInductiveVisualMinerYoungs4301.png used on i
 nput line 244.
-(pdftex.def)             Requested size: 152.09897pt x 25.83665pt.
+(pdftex.def)             Requested size: 156.14894pt x 26.52461pt.
 
-<AmbulatorioSojournYoungs.png, id=119, 142.28156pt x 351.56343pt>
+<AmbulatorioSojournYoungs.png, id=111, 142.28156pt x 351.56343pt>
 File: AmbulatorioSojournYoungs.png Graphic file (type png)
 
 <use AmbulatorioSojournYoungs.png>
 Package pdftex.def Info: AmbulatorioSojournYoungs.png used on input line 251.
-(pdftex.def)             Requested size: 84.5pt x 208.79927pt.
+(pdftex.def)             Requested size: 86.75pt x 214.36217pt.
 
-<AmbulatorioSojournOlds.png, id=120, 152.06813pt x 341.02406pt>
+<AmbulatorioSojournOlds.png, id=112, 152.06813pt x 341.02406pt>
 File: AmbulatorioSojournOlds.png Graphic file (type png)
 
 <use AmbulatorioSojournOlds.png>
 Package pdftex.def Info: AmbulatorioSojournOlds.png used on input line 255.
-(pdftex.def)             Requested size: 92.95052pt x 208.45107pt.
+(pdftex.def)             Requested size: 95.42552pt x 214.00331pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 250--258
 [][] [] 
+ []
+
+
+Overfull \hbox (3.22366pt too wide) in paragraph at lines 208--261
+\OT1/ptm/m/n/9.5 gia) and `\OT1/ptm/m/it/9.5 0901\OT1/ptm/m/n/9.5 ' (Chirur-gia
+ gen-erale) with med-i-cal pre-scrip-tions com-piled only by `\OT1/ptm/m/it/9.5
+ 1\OT1/ptm/m/n/9.5 ' (medico
  []
 
 [7
 
  <./AmbulatorioSojournForeigns.png> <./AmbulatorioSojournItalians.png> <./Ambul
 atoriInductiveVisualMinerYoungs.png> <./AmbulatoriInductiveVisualMinerOlds.png>
-]
-Underfull \vbox (badness 1571) has occurred while \output is active []
-
- [8 <./AmbulatoriSocialNetworkYoungs.png> <./AmbulatoriSocialNetworkOlds.png> <
-./AmbulatoriInductiveVisualMinerYoungs4301.png>] [9 <./AmbulatorioSojournYoungs
-.png> <./AmbulatorioSojournOlds.png>]
-<ProntoSoccorsoInductiveVisualMiner.png, id=152, 867.99281pt x 469.00218pt>
+] [8 <./AmbulatoriSocialNetworkYoungs.png> <./AmbulatoriSocialNetworkOlds.png> 
+<./AmbulatoriInductiveVisualMinerYoungs4301.png>] [9 <./AmbulatorioSojournYoung
+s.png> <./AmbulatorioSojournOlds.png>]
+<ProntoSoccorsoInductiveVisualMiner.png, id=144, 867.99281pt x 469.00218pt>
 File: ProntoSoccorsoInductiveVisualMiner.png Graphic file (type png)
 
 <use ProntoSoccorsoInductiveVisualMiner.png>
 Package pdftex.def Info: ProntoSoccorsoInductiveVisualMiner.png used on input l
 ine 266.
-(pdftex.def)             Requested size: 253.5pt x 136.97325pt.
+(pdftex.def)             Requested size: 260.25pt x 140.62302pt.
 
-<ProntoSoccorsoSocialNetwork.png, id=153, 727.21687pt x 452.4403pt>
+<ProntoSoccorsoSocialNetwork.png, id=145, 727.21687pt x 452.4403pt>
 File: ProntoSoccorsoSocialNetwork.png Graphic file (type png)
 
 <use ProntoSoccorsoSocialNetwork.png>
 Package pdftex.def Info: ProntoSoccorsoSocialNetwork.png used on input line 271
 .
-(pdftex.def)             Requested size: 236.59897pt x 147.20013pt.
+(pdftex.def)             Requested size: 242.89894pt x 151.12143pt.
  [10
 
  <./ProntoSoccorsoInductiveVisualMiner.png> <./ProntoSoccorsoSocialNetwork.png>
 ]
-<ProntoSoccorsoTransitionSystemSojourn.png, id=162, 963.6pt x 343.2825pt>
+<ProntoSoccorsoTransitionSystemSojourn.png, id=155, 963.6pt x 343.2825pt>
 File: ProntoSoccorsoTransitionSystemSojourn.png Graphic file (type png)
 
 <use ProntoSoccorsoTransitionSystemSojourn.png>
 Package pdftex.def Info: ProntoSoccorsoTransitionSystemSojourn.png used on inpu
 t line 279.
-(pdftex.def)             Requested size: 338.0pt x 120.41257pt.
+(pdftex.def)             Requested size: 347.0pt x 123.61826pt.
 
-<ProntoSoccorsoInductiveVisualMinerForeigns.png, id=165, 822.07124pt x 480.2943
+<ProntoSoccorsoInductiveVisualMinerForeigns.png, id=158, 822.07124pt x 480.2943
 7pt>
 File: ProntoSoccorsoInductiveVisualMinerForeigns.png Graphic file (type png)
  <use ProntoSoccorsoInductiveVisualMinerForeigns.png>
 Package pdftex.def Info: ProntoSoccorsoInductiveVisualMinerForeigns.png used on
  input line 284.
-(pdftex.def)             Requested size: 338.0pt x 197.4716pt.
+(pdftex.def)             Requested size: 347.0pt x 202.73361pt.
  [11
 
  <./ProntoSoccorsoTransitionSystemSojourn.png> <./ProntoSoccorsoInductiveVisual
 MinerForeigns.png>]
-<ProntoSoccorsoInductiveVisualMinerItalians.png, id=173, 856.70062pt x 453.9459
+<ProntoSoccorsoInductiveVisualMinerItalians.png, id=166, 856.70062pt x 453.9459
 4pt>
 File: ProntoSoccorsoInductiveVisualMinerItalians.png Graphic file (type png)
  <use ProntoSoccorsoInductiveVisualMinerItalians.png>
 Package pdftex.def Info: ProntoSoccorsoInductiveVisualMinerItalians.png used on
  input line 290.
-(pdftex.def)             Requested size: 338.0pt x 179.09541pt.
+(pdftex.def)             Requested size: 347.0pt x 183.86787pt.
 
-<ProntoSoccorsoHoWForeigns.png, id=179, 504.38437pt x 431.36156pt>
+<ProntoSoccorsoHoWForeigns.png, id=172, 504.38437pt x 431.36156pt>
 File: ProntoSoccorsoHoWForeigns.png Graphic file (type png)
 
 <use ProntoSoccorsoHoWForeigns.png>
 Package pdftex.def Info: ProntoSoccorsoHoWForeigns.png used on input line 296.
-(pdftex.def)             Requested size: 169.0pt x 144.53499pt.
+(pdftex.def)             Requested size: 173.5pt x 148.37889pt.
 
-<ProntoSoccorsoHoWItalians.png, id=180, 596.98032pt x 450.9347pt>
+<ProntoSoccorsoHoWItalians.png, id=173, 596.98032pt x 450.9347pt>
 File: ProntoSoccorsoHoWItalians.png Graphic file (type png)
 
 <use ProntoSoccorsoHoWItalians.png>
 Package pdftex.def Info: ProntoSoccorsoHoWItalians.png used on input line 300.
-(pdftex.def)             Requested size: 190.125pt x 143.61397pt.
+(pdftex.def)             Requested size: 195.1875pt x 147.43277pt.
 
-Overfull \hbox (21.125pt too wide) in paragraph at lines 300--301
+Overfull \hbox (21.6875pt too wide) in paragraph at lines 300--301
 [][] 
  []
 
@@ -634,269 +641,269 @@ Overfull \hbox (1.52002pt too wide) in paragraph at lines 295--303
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-<ProntoSoccorsoSojournForeigns.png, id=183, 963.6pt x 335.00156pt>
+<ProntoSoccorsoSojournForeigns.png, id=176, 963.6pt x 335.00156pt>
 File: ProntoSoccorsoSojournForeigns.png Graphic file (type png)
 
 <use ProntoSoccorsoSojournForeigns.png>
 Package pdftex.def Info: ProntoSoccorsoSojournForeigns.png used on input line 3
 08.
-(pdftex.def)             Requested size: 338.0pt x 117.50787pt.
+(pdftex.def)             Requested size: 347.0pt x 120.63625pt.
 
-<ProntoSoccorsoSojournItalians.png, id=184, 967.36406pt x 335.75438pt>
+<ProntoSoccorsoSojournItalians.png, id=177, 967.36406pt x 335.75438pt>
 File: ProntoSoccorsoSojournItalians.png Graphic file (type png)
 
 <use ProntoSoccorsoSojournItalians.png>
 Package pdftex.def Info: ProntoSoccorsoSojournItalians.png used on input line 3
 10.
-(pdftex.def)             Requested size: 338.0pt x 117.31085pt.
+(pdftex.def)             Requested size: 347.0pt x 120.436pt.
  [12
 
  <./ProntoSoccorsoInductiveVisualMinerItalians.png> <./ProntoSoccorsoHoWForeign
 s.png> <./ProntoSoccorsoHoWItalians.png>] [13 <./ProntoSoccorsoSojournForeigns.
 png> <./ProntoSoccorsoSojournItalians.png>]
-<ProntoSoccorsoInductiveVisualMinerYoungs.png, id=209, 856.70062pt x 370.38374p
+<ProntoSoccorsoInductiveVisualMinerYoungs.png, id=202, 856.70062pt x 370.38374p
 t>
 File: ProntoSoccorsoInductiveVisualMinerYoungs.png Graphic file (type png)
  <use ProntoSoccorsoInductiveVisualMinerYoungs.png>
 Package pdftex.def Info: ProntoSoccorsoInductiveVisualMinerYoungs.png used on i
 nput line 318.
-(pdftex.def)             Requested size: 338.0pt x 146.1276pt.
+(pdftex.def)             Requested size: 347.0pt x 150.02155pt.
 
-<ProntoSoccorsoInductiveVisualMinerOlds.png, id=210, 858.20625pt x 454.69875pt>
+<ProntoSoccorsoInductiveVisualMinerOlds.png, id=203, 858.20625pt x 454.69875pt>
 File: ProntoSoccorsoInductiveVisualMinerOlds.png Graphic file (type png)
 <use ProntoSoccorsoInductiveVisualMinerOlds.png>
 Package pdftex.def Info: ProntoSoccorsoInductiveVisualMinerOlds.png used on inp
 ut line 320.
-(pdftex.def)             Requested size: 338.0pt x 179.0802pt.
+(pdftex.def)             Requested size: 347.0pt x 183.8467pt.
  [14
 
  <./ProntoSoccorsoInductiveVisualMinerYoungs.png> <./ProntoSoccorsoInductiveVis
 ualMinerOlds.png>]
-<ProntoSoccorsoHoWYoungs.png, id=221, 351.56343pt x 353.06906pt>
+<ProntoSoccorsoHoWYoungs.png, id=214, 351.56343pt x 353.06906pt>
 File: ProntoSoccorsoHoWYoungs.png Graphic file (type png)
 
 <use ProntoSoccorsoHoWYoungs.png>
 Package pdftex.def Info: ProntoSoccorsoHoWYoungs.png used on input line 329.
-(pdftex.def)             Requested size: 253.5pt x 254.58125pt.
+(pdftex.def)             Requested size: 260.25pt x 261.36398pt.
 
-<ProntoSoccorsoHoWOlds.png, id=222, 686.565pt x 393.72093pt>
+<ProntoSoccorsoHoWOlds.png, id=215, 686.565pt x 393.72093pt>
 File: ProntoSoccorsoHoWOlds.png Graphic file (type png)
 
 <use ProntoSoccorsoHoWOlds.png>
 Package pdftex.def Info: ProntoSoccorsoHoWOlds.png used on input line 331.
-(pdftex.def)             Requested size: 253.5pt x 145.36807pt.
+(pdftex.def)             Requested size: 260.25pt x 149.24303pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-<ProntoSoccorsoSojournYoungs.png, id=227, 831.85782pt x 355.3275pt>
+<ProntoSoccorsoSojournYoungs.png, id=220, 831.85782pt x 355.3275pt>
 File: ProntoSoccorsoSojournYoungs.png Graphic file (type png)
 
 <use ProntoSoccorsoSojournYoungs.png>
 Package pdftex.def Info: ProntoSoccorsoSojournYoungs.png used on input line 337
 .
-(pdftex.def)             Requested size: 338.0pt x 144.37854pt.
+(pdftex.def)             Requested size: 347.0pt x 148.22263pt.
 
-<ProntoSoccorsoSojournOlds.png, id=228, 970.3753pt x 341.77687pt>
+<ProntoSoccorsoSojournOlds.png, id=221, 970.3753pt x 341.77687pt>
 File: ProntoSoccorsoSojournOlds.png Graphic file (type png)
 
 <use ProntoSoccorsoSojournOlds.png>
 Package pdftex.def Info: ProntoSoccorsoSojournOlds.png used on input line 339.
-(pdftex.def)             Requested size: 338.0pt x 119.05003pt.
+(pdftex.def)             Requested size: 347.0pt x 122.22081pt.
  [15
 
  <./ProntoSoccorsoHoWYoungs.png> <./ProntoSoccorsoHoWOlds.png>] [16 <./ProntoSo
 ccorsoSojournYoungs.png> <./ProntoSoccorsoSojournOlds.png>]
-<RicoveriProcessModel2.png, id=247, 1126.2075pt x 251.43938pt>
+<RicoveriProcessModel2.png, id=240, 1126.2075pt x 251.43938pt>
 File: RicoveriProcessModel2.png Graphic file (type png)
 
 <use RicoveriProcessModel2.png>
 Package pdftex.def Info: RicoveriProcessModel2.png used on input line 347.
-(pdftex.def)             Requested size: 338.0pt x 75.46307pt.
+(pdftex.def)             Requested size: 347.0pt x 77.46965pt.
 
-<RicoveriSocialNetwork.png, id=248, 364.36125pt x 310.91156pt>
+<RicoveriSocialNetwork.png, id=241, 364.36125pt x 310.91156pt>
 File: RicoveriSocialNetwork.png Graphic file (type png)
 
 <use RicoveriSocialNetwork.png>
 Package pdftex.def Info: RicoveriSocialNetwork.png used on input line 353.
-(pdftex.def)             Requested size: 253.5pt x 216.31299pt.
+(pdftex.def)             Requested size: 260.25pt x 222.08183pt.
 
-<RicoveriTransitionSystemSojourn.png, id=249, 521.69907pt x 755.07094pt>
+<RicoveriTransitionSystemSojourn.png, id=242, 521.69907pt x 755.07094pt>
 File: RicoveriTransitionSystemSojourn.png Graphic file (type png)
 
 <use RicoveriTransitionSystemSojourn.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn.png used on input line
  359.
-(pdftex.def)             Requested size: 287.30206pt x 415.82028pt.
+(pdftex.def)             Requested size: 294.95212pt x 426.89238pt.
  [17
 
  <./RicoveriProcessModel2.png> <./RicoveriSocialNetwork.png>] [18 <./RicoveriTr
 ansitionSystemSojourn.png>]
-<RicoveriInductiveVisualMiner0901.png, id=265, 856.70062pt x 79.79813pt>
+<RicoveriInductiveVisualMiner0901.png, id=259, 856.70062pt x 79.79813pt>
 File: RicoveriInductiveVisualMiner0901.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMiner0901.png>
 Package pdftex.def Info: RicoveriInductiveVisualMiner0901.png used on input lin
 e 374.
-(pdftex.def)             Requested size: 338.0pt x 31.48276pt.
+(pdftex.def)             Requested size: 347.0pt x 32.3217pt.
 
-<RicoveriSocialNetwork0901.png, id=266, 72.27pt x 76.78688pt>
+<RicoveriSocialNetwork0901.png, id=260, 72.27pt x 76.78688pt>
 File: RicoveriSocialNetwork0901.png Graphic file (type png)
 
 <use RicoveriSocialNetwork0901.png>
 Package pdftex.def Info: RicoveriSocialNetwork0901.png used on input line 380.
-(pdftex.def)             Requested size: 50.69794pt x 53.86642pt.
+(pdftex.def)             Requested size: 52.04788pt x 55.30055pt.
  [19
 
  <./RicoveriInductiveVisualMiner0901.png> <./RicoveriSocialNetwork0901.png>]
-<RicoveriTransitionSystemSojourn0901.png, id=277, 169.38281pt x 422.32782pt>
+<RicoveriTransitionSystemSojourn0901.png, id=271, 169.38281pt x 422.32782pt>
 File: RicoveriTransitionSystemSojourn0901.png Graphic file (type png)
 
 <use RicoveriTransitionSystemSojourn0901.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn0901.png used on input 
 line 387.
-(pdftex.def)             Requested size: 84.5pt x 210.69296pt.
+(pdftex.def)             Requested size: 86.75pt x 216.30585pt.
 
-<RicoveriChart.png, id=279, 801.74532pt x 408.77719pt>
+<RicoveriChart.png, id=273, 801.74532pt x 408.77719pt>
 File: RicoveriChart.png Graphic file (type png)
  <use RicoveriChart.png>
 Package pdftex.def Info: RicoveriChart.png used on input line 392.
-(pdftex.def)             Requested size: 253.5pt x 129.24577pt.
+(pdftex.def)             Requested size: 260.25pt x 132.68883pt.
 
-<RicoveriInductiveVisualMiner0901Fast.png, id=280, 854.44218pt x 82.05656pt>
+<RicoveriInductiveVisualMiner0901Fast.png, id=274, 854.44218pt x 82.05656pt>
 File: RicoveriInductiveVisualMiner0901Fast.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMiner0901Fast.png>
 Package pdftex.def Info: RicoveriInductiveVisualMiner0901Fast.png used on input
  line 397.
-(pdftex.def)             Requested size: 338.0pt x 32.45892pt.
+(pdftex.def)             Requested size: 347.0pt x 33.32411pt.
 
-<RicoveriInductiveVisualMiner0901Slow.png, id=281, 855.94781pt x 44.41594pt>
+<RicoveriInductiveVisualMiner0901Slow.png, id=275, 855.94781pt x 44.41594pt>
 File: RicoveriInductiveVisualMiner0901Slow.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMiner0901Slow.png>
 Package pdftex.def Info: RicoveriInductiveVisualMiner0901Slow.png used on input
  line 399.
-(pdftex.def)             Requested size: 338.0pt x 17.539pt.
+(pdftex.def)             Requested size: 347.0pt x 18.00597pt.
 
-<RicoveriTransitionSystemSojourn0901Fast.png, id=283, 152.06813pt x 422.32782pt
+<RicoveriTransitionSystemSojourn0901Fast.png, id=277, 152.06813pt x 422.32782pt
 >
 File: RicoveriTransitionSystemSojourn0901Fast.png Graphic file (type png)
  <use RicoveriTransitionSystemSojourn0901Fast.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn0901Fast.png used on in
 put line 405.
-(pdftex.def)             Requested size: 70.98041pt x 197.13437pt.
+(pdftex.def)             Requested size: 72.87042pt x 202.37994pt.
 
-<RicoveriTransitionSystemSojourn0901Slow.png, id=284, 118.94438pt x 422.32782pt
+<RicoveriTransitionSystemSojourn0901Slow.png, id=278, 118.94438pt x 422.32782pt
 >
 File: RicoveriTransitionSystemSojourn0901Slow.png Graphic file (type png)
  <use RicoveriTransitionSystemSojourn0901Slow.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn0901Slow.png used on in
 put line 409.
-(pdftex.def)             Requested size: 54.08124pt x 192.02412pt.
+(pdftex.def)             Requested size: 55.52127pt x 197.13437pt.
  [20
 
  <./RicoveriTransitionSystemSojourn0901.png> <./RicoveriChart.png>] [21 <./Rico
 veriInductiveVisualMiner0901Fast.png> <./RicoveriInductiveVisualMiner0901Slow.p
 ng> <./RicoveriTransitionSystemSojourn0901Fast.png> <./RicoveriTransitionSystem
 Sojourn0901Slow.png>]
-<RicoveriInductiveVisualMiner3601.png, id=306, 857.45343pt x 74.52844pt>
+<RicoveriInductiveVisualMiner3601.png, id=300, 857.45343pt x 74.52844pt>
 File: RicoveriInductiveVisualMiner3601.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMiner3601.png>
 Package pdftex.def Info: RicoveriInductiveVisualMiner3601.png used on input lin
 e 422.
-(pdftex.def)             Requested size: 338.0pt x 29.3787pt.
+(pdftex.def)             Requested size: 347.0pt x 30.1611pt.
 
-<RicoveriSocialNetwork3601.png, id=308, 103.88812pt x 86.57344pt>
+<RicoveriSocialNetwork3601.png, id=302, 103.88812pt x 86.57344pt>
 File: RicoveriSocialNetwork3601.png Graphic file (type png)
 
 <use RicoveriSocialNetwork3601.png>
 Package pdftex.def Info: RicoveriSocialNetwork3601.png used on input line 428.
-(pdftex.def)             Requested size: 101.40103pt x 84.50452pt.
+(pdftex.def)             Requested size: 104.10106pt x 86.75418pt.
  [22
 
  <./RicoveriInductiveVisualMiner3601.png> <./RicoveriSocialNetwork3601.png>]
-<RicoveriTransitionSystemSojourn3601.png, id=316, 146.04562pt x 424.58624pt>
+<RicoveriTransitionSystemSojourn3601.png, id=310, 146.04562pt x 424.58624pt>
 File: RicoveriTransitionSystemSojourn3601.png Graphic file (type png)
 
 <use RicoveriTransitionSystemSojourn3601.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn3601.png used on input 
 line 435.
-(pdftex.def)             Requested size: 74.36041pt x 216.18626pt.
+(pdftex.def)             Requested size: 76.34042pt x 221.94579pt.
 
-<RicoveriChart3.png, id=318, 800.23969pt x 405.01312pt>
+<RicoveriChart3.png, id=312, 800.23969pt x 405.01312pt>
 File: RicoveriChart3.png Graphic file (type png)
 
 <use RicoveriChart3.png>
 Package pdftex.def Info: RicoveriChart3.png used on input line 440.
-(pdftex.def)             Requested size: 253.5pt x 128.29668pt.
+(pdftex.def)             Requested size: 260.25pt x 131.71422pt.
  [23
 
  <./RicoveriTransitionSystemSojourn3601.png> <./RicoveriChart3.png>]
-<RicoveriInductiveVisualMiner3601Fast.png, id=326, 857.45343pt x 79.79813pt>
+<RicoveriInductiveVisualMiner3601Fast.png, id=320, 857.45343pt x 79.79813pt>
 File: RicoveriInductiveVisualMiner3601Fast.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMiner3601Fast.png>
 Package pdftex.def Info: RicoveriInductiveVisualMiner3601Fast.png used on input
  line 448.
-(pdftex.def)             Requested size: 338.0pt x 31.45598pt.
+(pdftex.def)             Requested size: 347.0pt x 32.2937pt.
 
-<RicoveriInductiveVisualMiner3601Slow.png, id=327, 856.70062pt x 44.41594pt>
+<RicoveriInductiveVisualMiner3601Slow.png, id=321, 856.70062pt x 44.41594pt>
 File: RicoveriInductiveVisualMiner3601Slow.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMiner3601Slow.png>
 Package pdftex.def Info: RicoveriInductiveVisualMiner3601Slow.png used on input
  line 450.
-(pdftex.def)             Requested size: 338.0pt x 17.52342pt.
+(pdftex.def)             Requested size: 347.0pt x 17.99037pt.
 
-<RicoveriTransitionSystemSojourn3601Fast.png, id=329, 139.27031pt x 423.83344pt
+<RicoveriTransitionSystemSojourn3601Fast.png, id=323, 139.27031pt x 423.83344pt
 >
 File: RicoveriTransitionSystemSojourn3601Fast.png Graphic file (type png)
  <use RicoveriTransitionSystemSojourn3601Fast.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn3601Fast.png used on in
 put line 456.
-(pdftex.def)             Requested size: 70.98041pt x 216.01637pt.
+(pdftex.def)             Requested size: 72.87042pt x 221.76569pt.
 
-<RicoveriTransitionSystemSojourn3601Slow.png, id=330, 100.12407pt x 417.81094pt
+<RicoveriTransitionSystemSojourn3601Slow.png, id=324, 100.12407pt x 417.81094pt
 >
 File: RicoveriTransitionSystemSojourn3601Slow.png Graphic file (type png)
  <use RicoveriTransitionSystemSojourn3601Slow.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojourn3601Slow.png used on in
 put line 460.
-(pdftex.def)             Requested size: 50.70052pt x 211.56982pt.
+(pdftex.def)             Requested size: 52.05052pt x 217.20557pt.
 
-<RicoveriInductiveVisualMinerForeigns.png, id=338, 1392.70313pt x 323.70938pt>
+<RicoveriInductiveVisualMinerForeigns.png, id=332, 1392.70313pt x 323.70938pt>
 File: RicoveriInductiveVisualMinerForeigns.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMinerForeigns.png>
 Package pdftex.def Info: RicoveriInductiveVisualMinerForeigns.png used on input
  line 467.
-(pdftex.def)             Requested size: 338.0pt x 78.56117pt.
+(pdftex.def)             Requested size: 347.0pt x 80.65053pt.
 
-<RicoveriInductiveVisualMinerItalian.png, id=339, 1293.33188pt x 242.40562pt>
+<RicoveriInductiveVisualMinerItalian.png, id=333, 1293.33188pt x 242.40562pt>
 File: RicoveriInductiveVisualMinerItalian.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMinerItalian.png>
 Package pdftex.def Info: RicoveriInductiveVisualMinerItalian.png used on input 
 line 469.
-(pdftex.def)             Requested size: 338.0pt x 63.34946pt.
+(pdftex.def)             Requested size: 347.0pt x 65.03612pt.
 
-<RicoveriSocialNetworkForeigns.png, id=344, 323.70938pt x 324.46219pt>
+<RicoveriSocialNetworkForeigns.png, id=338, 323.70938pt x 324.46219pt>
 File: RicoveriSocialNetworkForeigns.png Graphic file (type png)
 
 <use RicoveriSocialNetworkForeigns.png>
 Package pdftex.def Info: RicoveriSocialNetworkForeigns.png used on input line 4
 75.
-(pdftex.def)             Requested size: 135.20052pt x 135.51569pt.
+(pdftex.def)             Requested size: 138.80052pt x 139.1249pt.
 
-<RicoveriSocialNetworkItalians.png, id=345, 356.83313pt x 287.57437pt>
+<RicoveriSocialNetworkItalians.png, id=339, 356.83313pt x 287.57437pt>
 File: RicoveriSocialNetworkItalians.png Graphic file (type png)
 
 <use RicoveriSocialNetworkItalians.png>
 Package pdftex.def Info: RicoveriSocialNetworkItalians.png used on input line 4
 79.
-(pdftex.def)             Requested size: 169.0pt x 136.19554pt.
+(pdftex.def)             Requested size: 173.5pt x 139.82443pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 474--482
 [][] [] 
@@ -909,21 +916,26 @@ Overfull \hbox (1.52002pt too wide) in paragraph at lines 474--482
 onSystemSojourn3601Slow.png>] [25 <./RicoveriInductiveVisualMinerForeigns.png> 
 <./RicoveriInductiveVisualMinerItalian.png> <./RicoveriSocialNetworkForeigns.pn
 g> <./RicoveriSocialNetworkItalians.png>]
-<RicoveriTransitionSystemSojournForeigns.png, id=370, 337.26pt x 832.61063pt>
+<RicoveriTransitionSystemSojournForeigns.png, id=364, 337.26pt x 832.61063pt>
 File: RicoveriTransitionSystemSojournForeigns.png Graphic file (type png)
 
 <use RicoveriTransitionSystemSojournForeigns.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojournForeigns.png used on in
 put line 489.
-(pdftex.def)             Requested size: 135.19794pt x 333.77522pt.
+(pdftex.def)             Requested size: 138.79788pt x 342.65573pt.
 
-<RicoveriTransitionSystemSojournItalians.png, id=371, 469.00218pt x 745.28438pt
+Underfull \hbox (badness 2134) in paragraph at lines 490--490
+[]\OT1/ptm/b/n/8 Fig. 57|[]\OT1/ptm/m/n/8 Transition sys-tem (For-eign pa-
+ []
+
+
+<RicoveriTransitionSystemSojournItalians.png, id=365, 469.00218pt x 745.28438pt
 >
 File: RicoveriTransitionSystemSojournItalians.png Graphic file (type png)
  <use RicoveriTransitionSystemSojournItalians.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojournItalians.png used on in
 put line 493.
-(pdftex.def)             Requested size: 202.80206pt x 322.26283pt.
+(pdftex.def)             Requested size: 208.20212pt x 330.84877pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 488--496
 [][] [] 
@@ -933,57 +945,57 @@ Overfull \hbox (1.52002pt too wide) in paragraph at lines 488--496
 
  <./RicoveriTransitionSystemSojournForeigns.png> <./RicoveriTransitionSystemSoj
 ournItalians.png>]
-<RicoveriInductiveVisualMinerYoungs.png, id=380, 1418.29875pt x 338.01282pt>
+<RicoveriInductiveVisualMinerYoungs.png, id=375, 1418.29875pt x 338.01282pt>
 File: RicoveriInductiveVisualMinerYoungs.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMinerYoungs.png>
 Package pdftex.def Info: RicoveriInductiveVisualMinerYoungs.png used on input l
 ine 502.
-(pdftex.def)             Requested size: 338.0pt x 80.55223pt.
+(pdftex.def)             Requested size: 347.0pt x 82.69781pt.
 
-<RicoveriInductiveVisualMinerOlds.png, id=381, 1219.55624pt x 231.86626pt>
+<RicoveriInductiveVisualMinerOlds.png, id=376, 1219.55624pt x 231.86626pt>
 File: RicoveriInductiveVisualMinerOlds.png Graphic file (type png)
 
 <use RicoveriInductiveVisualMinerOlds.png>
 Package pdftex.def Info: RicoveriInductiveVisualMinerOlds.png used on input lin
 e 504.
-(pdftex.def)             Requested size: 338.0pt x 64.2605pt.
+(pdftex.def)             Requested size: 347.0pt x 65.97289pt.
 
-<RicoveriSocialNetworkYoungs.png, id=390, 297.36093pt x 278.54062pt>
+<RicoveriSocialNetworkYoungs.png, id=385, 297.36093pt x 278.54062pt>
 File: RicoveriSocialNetworkYoungs.png Graphic file (type png)
 
 <use RicoveriSocialNetworkYoungs.png>
 Package pdftex.def Info: RicoveriSocialNetworkYoungs.png used on input line 511
 .
-(pdftex.def)             Requested size: 135.19794pt x 126.63841pt.
+(pdftex.def)             Requested size: 138.79788pt x 130.01306pt.
 
-<RicoveriSocialNetworkOlds.png, id=391, 348.55219pt x 240.14719pt>
+<RicoveriSocialNetworkOlds.png, id=386, 348.55219pt x 240.14719pt>
 File: RicoveriSocialNetworkOlds.png Graphic file (type png)
 
 <use RicoveriSocialNetworkOlds.png>
 Package pdftex.def Info: RicoveriSocialNetworkOlds.png used on input line 515.
-(pdftex.def)             Requested size: 182.52061pt x 125.75302pt.
+(pdftex.def)             Requested size: 187.38063pt x 129.10223pt.
 
 Overfull \hbox (1.52002pt too wide) in paragraph at lines 510--518
 [][] [] 
  []
 
 
-<RicoveriTransitionSystemSojournYoungs.png, id=395, 241.65282pt x 741.52031pt>
+<RicoveriTransitionSystemSojournYoungs.png, id=390, 241.65282pt x 741.52031pt>
 File: RicoveriTransitionSystemSojournYoungs.png Graphic file (type png)
 
 <use RicoveriTransitionSystemSojournYoungs.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojournYoungs.png used on inpu
 t line 522.
-(pdftex.def)             Requested size: 101.40103pt x 311.15353pt.
+(pdftex.def)             Requested size: 104.10106pt x 319.43588pt.
 
-<RicoveriTransitionSystemSojournOlds.png, id=396, 449.42906pt x 742.27313pt>
+<RicoveriTransitionSystemSojournOlds.png, id=391, 449.42906pt x 742.27313pt>
 File: RicoveriTransitionSystemSojournOlds.png Graphic file (type png)
 
 <use RicoveriTransitionSystemSojournOlds.png>
 Package pdftex.def Info: RicoveriTransitionSystemSojournOlds.png used on input 
 line 526.
-(pdftex.def)             Requested size: 185.90103pt x 307.02959pt.
+(pdftex.def)             Requested size: 190.85106pt x 315.20708pt.
  [27
 
  <./RicoveriInductiveVisualMinerYoungs.png> <./RicoveriInductiveVisualMinerOlds
@@ -1008,26 +1020,26 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 604.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 604.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 604.
 Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: 0DE11B53735B9BF87E21117AA999DB47;250.
+(rerunfilecheck)             Checksum: 92087B968F870945EA9B5031C4917BD3;139.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 604.
  ) 
 Here is how much of TeX's memory you used:
- 6423 strings out of 493334
- 103198 string characters out of 3139249
- 176615 words of memory out of 3000000
- 9681 multiletter control sequences out of 15000+200000
- 29853 words of font info for 68 fonts, out of 3000000 for 9000
+ 6433 strings out of 493334
+ 103378 string characters out of 3139249
+ 176599 words of memory out of 3000000
+ 9687 multiletter control sequences out of 15000+200000
+ 33884 words of font info for 79 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,28p,2244b,437s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,8n,28p,2245b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (30 pages, 2497882 bytes).
+Output written on paper.pdf (30 pages, 2601455 bytes).
 PDF statistics:
- 507 PDF objects out of 1000 (max. 8388607)
+ 503 PDF objects out of 1000 (max. 8388607)
  143 named destinations out of 1000 (max. 500000)
- 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 

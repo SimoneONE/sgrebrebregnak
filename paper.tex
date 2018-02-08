@@ -38,9 +38,9 @@ grestore
 %
 \RequirePackage{fix-cm}
 %
-%\documentclass{svjour3}                     % onecolumn (standard format)
+\documentclass{svjour3}                     % onecolumn (standard format)
 %\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
-\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
 %\documentclass[twocolumn]{svjour3}          % twocolumn
 %
 \smartqed  % flush right qed marks, e.g. at end of proof
@@ -260,7 +260,7 @@ At first glance, looking at the two transition systems we can see that the state
 The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint.
 \clearpage
 \noindent
-\section{Pronto soccorso dataset}\label{analysis:2}
+\subsection{Pronto soccorso dataset}\label{analysis:2}
 The \setword{blueprint}{Word:prontosoccorsoblueprint} in terms of process model is the following:
 \begin{figure} [htbp]
 \includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMiner}
@@ -341,7 +341,7 @@ The main difference, which it’s pretty obvious, is that the number of resource
 \end{figure} \\
 At first glance, looking at the two transition systems we can see that both states and arcs associated with activities belonging to the cluster [\ref{Word:old}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:young}] (the reason is always the same). Moreover, we can see that the most of time, for both the clusters [\ref{Word:young}] and [\ref{Word:old}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis.
 \clearpage
-\section{Ricoveri dataset}\label{analysis:3}
+\subsection{Ricoveri dataset}\label{analysis:3}
 The \setword{blueprint}{Word:ricoveriblueprint} in terms of process model is the following:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth]{RicoveriProcessModel2}

@@ -187,14 +187,16 @@ from the sojourn time point of view, is spent on the activity `\textit{reservati
 \caption{Clinical path (Italian patients)}
 \end{figure}\\
 Both the process models are identical to the \ref{Word:bpprocmod}, the only difference is on the number of process executions (3801 for [\ref{Word:foreign}] and 105654 for [\ref{Word:italian}]). Furthermore, looking at both the figures, we can see that the most of both foreign and italian patients take the medical prescription and ask for a reservation before the healthcare provision. From the organizational point of view, the social networks derived from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are as follows:
+
 \begin{figure} [htbp]
+\begin{minipage}[t]{0.5\textwidth}
 \includegraphics[width=0.75\textwidth, keepaspectratio]{AmbulatoriSocialNetworkForeigns}
 \caption{Social Network (Foreign patients)}
-\end{figure}
-\clearpage
-\begin{figure}
-\includegraphics[width=0.75\textwidth, keepaspectratio]{AmbulatoriSocialNetworkItalians}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=0.83\textwidth, keepaspectratio]{AmbulatoriSocialNetworkItalians}
 \caption{Social Network (Italian patients)}
+\end{minipage}
 \end{figure}
 \noindent
 Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] involve the same resources as the blueprint \ref{Word:ambsocnet}. The only difference is on the outpatient clinic `\textit{4301}' (Urologia): the foreign patients go in this outpatient clinic without medical prescription instead the italian patients with a medical prescription compiled only from `\textit{1}' (medico di medicina generale) .This means all the foreign patients going in `\textit{4301}' perform only one activity, the `\textit{healthcare provision}'activity:
@@ -206,12 +208,12 @@ Looking at the pictures, the social networks of the patients belonging from both
 \noindent
 Looking at the performance perspective, in particular at the \textit{sojourn time} point of view, we obtained:
 \begin{figure} [htbp]
-\begin{minipage}[t]{0.3\textwidth}
-\includegraphics[width=\textwidth, keepaspectratio]{AmbulatorioSojournForeigns}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=0.5\textwidth, keepaspectratio]{AmbulatorioSojournForeigns}
 \caption{Transition system (Foreign patients)}
 \end{minipage}
-\begin{minipage}[t]{0.3\textwidth}
-\includegraphics[width=\textwidth, keepaspectratio]{AmbulatorioSojournItalians}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=0.5\textwidth, keepaspectratio]{AmbulatorioSojournItalians}
 \caption{Transition system (Italian patients)}
 \end{minipage}
 \end{figure}\\
@@ -222,41 +224,42 @@ Now we can consider another set of clusters: patients belonging both to [\ref{Wo
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth]{AmbulatoriInductiveVisualMinerYoungs}
 \caption{Clinical path ($\leq$25 years)}
-\end{figure}\\
-\begin{figure} [htbp]
 \includegraphics[width=\textwidth]{AmbulatoriInductiveVisualMinerOlds}
 \caption{Clinical path ($>$25 years)}
 \end{figure}\\
-Both the process models are identical to the \ref{Word:bpprocmod}, but there are an interesting difference regarding the behaviour of the patients belonging to both the clusters [\ref{Word:young}] and [\ref{Word:old}], in particular regarding the most frequent path. The most frequent path taken by the patients with an age lower than 25 years (resident in Latium) is the one made up by the `\textit{healthcare provision}' activity (they go directly in outpatient clinic), instead, the most frequent path taken by the patients with an age grater or equal than 25 years (resident in Latium) is made up by the following activities: `\textit{prescription}' $ \rightarrow $ `\textit{reservation}' $ \rightarrow$ `\textit{healthcare provision}' (they take the medical prescription, then they ask for a reservation for perfoming the healthcare provision). Another difference which points out is on the number of process executions (9881 for [\ref{Word:young}] and 96506 for [\ref{Word:old}]).
-\clearpage
-\noindent
+Both the process models are identical to the \ref{Word:bpprocmod}, but there are an interesting difference regarding the behaviour of the patients belonging to both the clusters [\ref{Word:young}] and [\ref{Word:old}], in particular regarding the most frequent path. The most frequent path taken by the patients with an age lower than 25 years (resident in Latium) is the one made up by the `\textit{healthcare provision}' activity (they go directly in outpatient clinic), instead, the most frequent path taken by the patients with an age grater or equal than 25 years (resident in Latium) is made up by the following activities: `\textit{prescription}' $ \rightarrow $ `\textit{reservation}' $ \rightarrow$ `\textit{healthcare provision}' (they take the medical prescription, then they ask for a reservation for perfoming the healthcare provision). Another difference which points out is on the number of process executions (9881 for [\ref{Word:young}] and 96506 for [\ref{Word:old}]).\\
 From the organizational point of view, the social networks derived from both the clusters [\ref{Word:young}] and [\ref{Word:old}] are as follows:
 \begin{figure} [htbp]
-\includegraphics[width=0.5\textwidth]{AmbulatoriSocialNetworkYoungs}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=0.89\textwidth]{AmbulatoriSocialNetworkYoungs}
 \caption{Social network ($\leq$25 years)}
-\includegraphics[width=0.5\textwidth]{AmbulatoriSocialNetworkOlds}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=\textwidth]{AmbulatoriSocialNetworkOlds}
 \caption{Social network ($>$25 years)}
-\end{figure} \newline
+\end{minipage}
+\end{figure}\\
 Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:young}] and [\ref{Word:old}] involve the same resources as the blueprint \ref{Word:ambsocnet}. The main difference is on the outpatient clinic `\textit{4301}' (Urologia): the patients with an age lower than 25 years (resident in Latium) go in this outpatient clinic without medical prescription, instead, the patients with an age greater or equal than 25 years (resident in Latium) go in this outpatient clinic with a medical prescription compiled only by `\textit{1}' (medico di medicina generale). This means all the patients belonging to the cluster [\ref{Word:young}] going in `\textit{4301}' (Urologia) perform only one activity, the `\textit{healthcare provision}'activity:
 \begin{figure} [htbp]
-\centering
-\includegraphics[width=0.5\textwidth]{AmbulatoriInductiveVisualMinerYoungs4301}
+\includegraphics[width=0.45\textwidth]{AmbulatoriInductiveVisualMinerYoungs4301}
 \caption{Urologia ($\leq$25 years)}
 \end{figure}\\
 Moreover, patients belonging from [\ref{Word:young}] go in both outpatient clinics `\textit{5801}' (Gastroenterologia) and `\textit{0901}' (Chirurgia generale) with medical prescriptions compiled only by `\textit{1}' (medico di medicina generale). For patients belonging from [\ref{Word:old}] there are also cases of medical prescriptions compiled by `\textit{2}' (medico specialista dipendente da struttura pubblica).\\
 Looking at the performance perspective, in particular at the \textit{sojourn time} point of view, we obtained:
 \begin{figure} [htbp]
-\begin{minipage}[t]{0.3\textwidth}
-\includegraphics[width=\textwidth]{AmbulatorioSojournYoungs}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=0.5\textwidth]{AmbulatorioSojournYoungs}
 \caption{Transition system ($\leq$25 years)}
 \end{minipage}
-\begin{minipage}[t]{0.33\textwidth}
-\includegraphics[width=\textwidth]{AmbulatorioSojournOlds}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=0.55\textwidth]{AmbulatorioSojournOlds}
 \caption{Transition system ($>$25 years)}
 \end{minipage}
 \end{figure}\\
 At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:old}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:young}], since the cluster [\ref{Word:young}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:old}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:young}] and [\ref{Word:old}], is spent on the activity `\textit{reservation}' where a patient is waiting for the healthcare provision. % the average sojourn time for this activity is 31 days 1 hour for patients belonging to [\ref{Word:young}] and 35 days 17 hours for patients belonging to [\ref{Word:old}].
- The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint.
+The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint.
+\clearpage
+\noindent
 \section{Pronto soccorso dataset}\label{analysis:2}
 The \setword{blueprint}{Word:prontosoccorsoblueprint} in terms of process model is the following:
 \begin{figure} [htbp]
@@ -268,7 +271,10 @@ Looking at the figure, we can see that a patient arrives in emergency room, then
 \includegraphics[width=0.7\textwidth, keepaspectratio]{ProntoSoccorsoSocialNetwork}
 \caption{Social network (Totality of patients)}
 \end{figure}\\
-From the social network points out a patient go in emergency room, that is, the one coded with `\textit{12007300}' (San Carlo Nancy emergency room); then he is assigned to emergency room specialty `\textit{99}' and from here he can be either transferred to another Institute or to another hospitalization ward. On the other hand, the transition system, under the \textit{sojourn time} point of view is the following:
+From the social network points out a patient go in emergency room, that is, the one coded with `\textit{12007300}' (San Carlo Nancy emergency room); then he is assigned to emergency room specialty `\textit{99}' and from here he can be either transferred to another Institute or to another hospitalization ward.
+\clearpage
+\noindent
+On the other hand, the transition system, under the \textit{sojourn time} point of view is the following:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoTransitionSystemSojourn}
 \caption{Transition System (Totality of patients)}
@@ -278,42 +284,54 @@ We can see that the most of time is spent on the activity `\textit{illness analy
 \includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoInductiveVisualMinerForeigns}
 \caption{Clinical path (Foreign patients)}
 \end{figure}
+\clearpage
+\noindent
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoInductiveVisualMinerItalians}
 \caption{Clinical path (Italian patients)}
 \end{figure}\\
 Both the process models are identical to the \ref{Word:prontosoccorsoblueprint}, the only difference is on the number of process executions (2958 for [\ref{Word:foreign}] and 19095 for [\ref{Word:italian}]). Furthermore, looking at both the figures, we can see that the most of both foreign and italian patients after performed the illness analysis are sent home. From the organizational point of view, the social networks derived from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are as follows:
 \begin{figure} [htbp]
-\includegraphics[width=0.75\textwidth , keepaspectratio]{ProntoSoccorsoHoWForeigns}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoHoWForeigns}
 \caption{Social network (Foreign patients)}
-\end{figure}
-\clearpage
-\noindent
-\begin{figure}
-\includegraphics[width=0.75\textwidth , keepaspectratio]{ProntoSoccorsoHoWItalians}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\includegraphics[width=1.125\textwidth , keepaspectratio]{ProntoSoccorsoHoWItalians}
 \caption{Social network (Italian patients)}
+\end{minipage}
 \end{figure}
+\newline
+\noindent
 Looking at the pictures, the social networks of the patients belonging from both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] are quite different. The main difference, which it’s pretty obvious, is that the number of resources involved in the cluster of the italian patients is more grater than the number of resources involved in the cluster of the foreign patients. In particular, italian patients are transferred in a greater number of Institutes. Moreover, there is the hospitalization ward `\textit{3403}' (oculistica) belonging only to the cluster of italian patients. The transition systems, on the \textit{sojourn time} point of view, are:
 \begin{figure} [h]
-\includegraphics[width=0.8\textwidth]{ProntoSoccorsoSojournForeigns}
+\includegraphics[width=\textwidth]{ProntoSoccorsoSojournForeigns}
 \caption{Transition system (Foreign patients)}
-\includegraphics[width=0.8\textwidth]{ProntoSoccorsoSojournItalians}
+\includegraphics[width=\textwidth]{ProntoSoccorsoSojournItalians}
 \caption{Transition system (Italian patients)}
 \end{figure} \newline
-At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:italian}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:foreign}], since the cluster [\ref{Word:foreign}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:italian}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis. The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint. Then, we have considered both the clusters of patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}] and the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}]. The process models obtained are the following:
+At first glance, looking at the two transition systems we can see that the states associated with activities belonging to the cluster [\ref{Word:italian}] have a border ticker than the states associated with activities belonging to the cluster [\ref{Word:foreign}], since the cluster [\ref{Word:foreign}] contains a number of patient's cases strictly lower than the cluster [\ref{Word:italian}]. The same argument applies to arcs. Moreover, we can see that the most of time, for both the clusters [\ref{Word:foreign}] and [\ref{Word:italian}] is spent on the activity `\textit{illness analysis}' where the patient is waiting for the result of the diagnosis. The avg sojourn time of both the clusters is equal (more or less) to the one of the blueprint. Then, we have considered both the clusters of patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}] and the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}]. 
+\clearpage
+\noindent
+The process models obtained are the following:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMinerYoungs}
 \caption{Clinical path ($\leq$25 years)}
 \includegraphics[width=\textwidth, keepaspectratio]{ProntoSoccorsoInductiveVisualMinerOlds}
 \caption{Clinical path ($>$25 years)}
-\end{figure}\\
-Looking at the process model we can see that the patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}] does not have the activities: `\textit{dead body}' and `\textit{dead in emergency room}', with respect to the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}]. However, the behaviour of the patients belonging to these two clusters is pretty equal; also the most frequent path is the same: `\textit{arrival}' $\Rightarrow$ `\textit{illness analysis}' $\Rightarrow$ `\textit{home}'. The derived social networks for both [\ref{Word:young}] and [\ref{Word:old}] are:
+\end{figure}
+Looking at the process model we can see that the patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}] does not have the activities: `\textit{dead body}' and `\textit{dead in emergency room}', with respect to the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}]. However, the behaviour of the patients belonging to these two clusters is pretty equal; also the most frequent path is the same: `\textit{arrival}' $\Rightarrow$ `\textit{illness analysis}' $\Rightarrow$ `\textit{home}'.
+\clearpage
+\noindent
+The derived social networks for both [\ref{Word:young}] and [\ref{Word:old}] are:
+
 \begin{figure} [htbp]
 \includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoHoWYoungs}
 \caption{Social network ($\leq$25 years)}
 \includegraphics[width=0.75\textwidth, keepaspectratio]{ProntoSoccorsoHoWOlds}
 \caption{Social network ($>$25 years)}
-\end{figure}\\
+\end{figure}
+\noindent
 The main difference, which it’s pretty obvious, is that the number of resources involved in the cluster of patients with an age greater than 25 years (resident in Latium) [\ref{Word:old}] is more greater than the number of resources involved in the cluster of patients with an age lower or equal than 25 years (resident in Latium) [\ref{Word:young}]. In particular, the patients of the cluster [\ref{Word:old}] are transferred in a greater number of Institutes. Furthermore, there is the hospitalization ward `\textit{3403}' (oculistica) belonging only to the cluster [\ref{Word:old}]. The transition systems, on the \textit{sojourn time} point of view, are:
 \begin{figure} [htbp]
 \includegraphics[width=\textwidth , keepaspectratio]{ProntoSoccorsoSojournYoungs}
